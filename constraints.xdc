@@ -1,3 +1,4 @@
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets in1_IBUF]
 # clock
 set_property PACKAGE_PIN E3 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
