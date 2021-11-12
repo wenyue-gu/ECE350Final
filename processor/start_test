@@ -1,0 +1,11 @@
+#!/bin/bash
+FILE_NAME="controls"
+NUM_CYCLES=250
+
+rm -rf submit
+find . -name "*.v" > FileList.txt
+./asm -o processor/Test\ Files/Memory\ Files/"$FILE_NAME.memraw" processor/Test\ Files/Assembly\ Files/"$FILE_NAME.s"
+cat processor/Test\ Files/Memory\ Files/"$FILE_NAME.memraw" | head -n$NUM_CYCLES > processor/Test\ Files/Memory\ Files/"$FILE_NAME.mem"
+rm -f processor/Test\ Files/Memory\ Files/"$FILE_NAME.memraw"
+iverilog -o proc -c FileList.txt -s Wrapper_tb -P Wrapper_tb.FILE=\"$FILE_NAME\"
+vvp proc
