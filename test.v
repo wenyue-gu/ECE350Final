@@ -13,7 +13,9 @@ module test (
     output reg led5
 );
     reg[2:0] score;
+    reg[3:0] counter;
     initial begin
+        counter = 4'b0;
         o1 = 1'b1;
         score = 3'd0;
         led0 = 1'b0;
@@ -27,13 +29,17 @@ module test (
     always @(posedge in1) begin
         if (o1) begin
             o1 = 1'b0;
+            counter<=4'd0;
             score <= score + 3'd1;
-            #1
-            o1 = 1'b1;
         end
     end
 
     always @(posedge clk) begin
+        counter <= counter+4'd1;
+        if (counter== 4'd10) begin
+            counter<=4'd0;
+            o1=~o1;
+        end
         if (score == 3'd0)
             led0 <= 1'b1;
         if (score == 3'd1)
