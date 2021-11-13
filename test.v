@@ -40,17 +40,29 @@ module test (
             counter<=4'd0;
             o1=~o1;
         end
-        if (score == 3'd0)
+        if (score%6 == 3'd0)
             led0 <= 1'b1;
-        if (score == 3'd1)
+        else
+            led0 <= 1'b0;
+        if (score%6 == 3'd1)
             led1 <= 1'b1;
-        if (score == 3'd2)
+        else
+            led1 <= 1'b0;
+        if (score%6 == 3'd2)
             led2 <= 1'b1;
-        if (score == 3'd3)
+        else
+            led2 <= 1'b0;
+        if (score%6 == 3'd3)
             led3 <= 1'b1;
-        if (score == 3'd4)
+        else
+            led3 <= 1'b0;
+        if (score%6 == 3'd4)
             led4 <= 1'b1;
-        if (score == 3'd5)
+        else
+            led4 <= 1'b0;
+        if (score%6 == 3'd5)
             led5 <= 1'b1;
+        else
+            led5 <= 1'b0;
     end
 endmodule
