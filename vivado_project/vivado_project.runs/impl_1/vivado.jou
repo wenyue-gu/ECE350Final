@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Nov 12 14:14:57 2021
-# Process ID: 5612
+# Start of session at: Sat Nov 13 18:02:48 2021
+# Process ID: 11200
 # Current directory: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/impl_1
 # Command line: vivado.exe -log test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source test.tcl -notrace
 # Log file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/impl_1/test.vdi
