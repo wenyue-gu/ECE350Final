@@ -14,6 +14,7 @@ module test (
 );
     reg[2:0] score;
     integer counter;
+    reg in1m;
 
     initial begin
         counter = 0;
@@ -44,7 +45,7 @@ module test (
            end
        else
        counter = counter + 1;
-       if (in1==1'b0 && o1==1'b1) begin
+       if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
             o1=1'b0;
             counter=0;
             score <= score + 3'd1;
@@ -74,5 +75,6 @@ module test (
             led5 <= 1'b1;
         else
             led5 <= 1'b0;
+        in1=in1m;
     end
 endmodule
