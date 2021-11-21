@@ -1,7 +1,13 @@
 module test (
     output reg o1,
-    
     input in1,
+    output reg o2,
+    input in2,
+    output reg o3,
+    input in3,
+    output reg o4,
+    input in4,
+
     input clk,
 
     output reg led0,
@@ -13,11 +19,18 @@ module test (
     output reg led15
 );
     reg[2:0] score;
-    integer counter;
+    integer counter1;
+    integer counter2;
+    integer counter3;
+    integer counter4;
     reg in1m;
 
     initial begin
-        counter = 0;
+        counter1 = 0;
+        counter2 = 0;
+        counter3 = 0;
+        counter4 = 0;
+        in1m = in1;
         o1 = 1'b1;
         score = 3'd0;
         led0 = 1'b0;
@@ -39,17 +52,27 @@ module test (
 
     always @(posedge clk) begin
        
-       if (counter >= 50000000) begin
-           counter <= 0;
-           o1 <= !o1;
-           end
-       else
-       counter = counter + 1;
-       if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
+       if (o1==1'b1 && counter1 >= 50000000) begin
+            counter1 <= 0;
+            o1 <= 1'b0;
+        end else if(o1==1'b0 && counter1 >= 250000000) begin
+            counter1 <= 0;
+            o1 <= 1'b1;
+        end
+
+
+
+        if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
             o1=1'b0;
-            counter=0;
+            counter1=0;
             score <= score + 3'd1;
         end
+
+
+        counter1 = counter1 + 1;
+        in1=in1m;
+
+
         
         if (score % 6 == 3'd0)
             led0 <= 1'b1;
@@ -75,6 +98,5 @@ module test (
             led5 <= 1'b1;
         else
             led5 <= 1'b0;
-        in1=in1m;
     end
 endmodule
