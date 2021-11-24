@@ -50,6 +50,7 @@ module test (
 //        end
 //    end
 
+// 100 000000 - 1s
     always @(posedge clk) begin
        
        if (o1==1'b1 && counter1 >= 50000000) begin
@@ -70,7 +71,7 @@ module test (
 
 
         counter1 = counter1 + 1;
-        in1=in1m;
+        in1m = in1;
 
 
         
