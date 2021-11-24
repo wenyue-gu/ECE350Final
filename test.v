@@ -24,6 +24,9 @@ module test (
     integer counter3;
     integer counter4;
     reg in1m;
+    reg in2m;
+    reg in3m;
+    reg in4m;
 
     initial begin
         counter1 = 0;
@@ -60,9 +63,6 @@ module test (
             counter1 <= 0;
             o1 <= 1'b1;
         end
-
-
-
         if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
             o1=1'b0;
             counter1=0;
@@ -70,8 +70,59 @@ module test (
         end
 
 
+
+        if (o2==1'b1 && counter2 >= 50000000) begin
+            counter2 <= 0;
+            o2 <= 1'b0;
+        end else if(o2==1'b0 && counter2 >= 350000000) begin
+            counter2 <= 0;
+            o2 <= 1'b1;
+        end
+        if (in2 != in2m && in2==1'b0 && o2==1'b1) begin
+            o2=1'b0;
+            counter2=0;
+            score <= score + 3'd1;
+        end
+
+
+        if (o3==1'b1 && counter3 >= 50000000) begin
+            counter3 <= 0;
+            o3 <= 1'b0;
+        end else if(o3==1'b0 && counter3 >= 400000000) begin
+            counter3 <= 0;
+            o3 <= 1'b1;
+        end
+        if (in3 != in3m && in3==1'b0 && o3==1'b1) begin
+            o3=1'b0;
+            counter3=0;
+            score <= score + 3'd1;
+        end
+
+
+
+        if (o4==1'b1 && counter4 >= 50000000) begin
+            counter4 <= 0;
+            o4 <= 1'b0;
+        end else if(o4==1'b0 && counter4 >= 350000000) begin
+            counter4 <= 0;
+            o4 <= 1'b1;
+        end
+        if (in4 != in4m && in4==1'b0 && o4==1'b1) begin
+            o4=1'b0;
+            counter4=0;
+            score <= score + 3'd1;
+        end
+
+
+
         counter1 = counter1 + 1;
         in1m = in1;
+        counter2 = counter2 + 1;
+        in2m = in2;
+        counter3 = counter3 + 1;
+        in3m = in3;
+        counter4 = counter4 + 1;
+        in4m = in4;
 
 
         
