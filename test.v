@@ -30,7 +30,7 @@ module test (
 	inout ps2_clk,
 	inout ps2_data
     );
-    
+
     reg[31:0] miss;
     reg[31:0] score;
     reg ingame;
@@ -58,7 +58,7 @@ module test (
         o4 = 1'b1;
         o5 = 1'b1;
         ingame = 1'b0;
-        score = 3'd0;
+        score = 32'd0;
         led0 = 1'b0;
         led1 = 1'b0;
         led2 = 1'b0;
@@ -151,7 +151,6 @@ module test (
 
 
             //use led to display score
-            VGAController VGA(score,clk,reset, hSync, vSync,VGA_R,VGA_G, VGA_B,ps2_clk,ps2_data);
 
             if (score % 6 == 32'd0)
                 led0 <= 1'b1;
@@ -189,4 +188,7 @@ module test (
             end
         end
     end
+
+    VGAController VGA(score,clk,reset, hSync, vSync,VGA_R,VGA_G, VGA_B,ps2_clk,ps2_data);
+
 endmodule
