@@ -18,6 +18,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports o3]
 set_property PACKAGE_PIN H1 [get_ports o4] 
 set_property IOSTANDARD LVCMOS33 [get_ports o4]
 
+# JD3
+set_property PACKAGE_PIN G1 [get_ports o5] 
+set_property IOSTANDARD LVCMOS33 [get_ports o5]
+
 
 # button input
 # JB1
@@ -32,6 +36,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports in3]
 # JC2
 set_property PACKAGE_PIN F6 [get_ports in4] 
 set_property IOSTANDARD LVCMOS33 [get_ports in4]
+
+# JC3
+set_property PACKAGE_PIN J2 [get_ports in5] 
+set_property IOSTANDARD LVCMOS33 [get_ports in5]
 
 
 # LED
