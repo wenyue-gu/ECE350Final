@@ -1,0 +1,201 @@
+Cycle   0: 2
+Cycle   1: 2
+Cycle   2: 2
+Cycle   3: 2
+Cycle   4: 2
+Cycle   5: 2
+Cycle   6: 2
+Cycle   7: 2
+Cycle   8: 2
+Cycle   9: 2
+Cycle  10: 2
+Cycle  11: 2
+Cycle  12: 2
+Cycle  12: Wrote 12 into register 31
+Cycle  13: 0
+Cycle  14: 2
+Cycle  14: Wrote 16 into register 31
+Cycle  15: 2
+Cycle  16: 2
+Cycle  17: 2
+Cycle  18: 2
+Cycle  18: Wrote 1 into register 10
+Cycle  19: 2
+Cycle  19: Wrote 1 into register 11
+Cycle  20: 2
+Cycle  20: Wrote 0 into register 21
+Cycle  21: 2
+Cycle  21: Wrote 0 into register 10
+Cycle  22: 2
+Cycle  22: Wrote 0 into register 20
+Cycle  23: 2
+Cycle  24: 2
+Cycle  25: 2
+Cycle  25: Wrote 32 into register 31
+Cycle  26: 2
+Cycle  27: 2
+Cycle  27: Wrote 26 into register 31
+Cycle  28: 2
+Cycle  29: 2
+Cycle  30: 2
+Cycle  31: 2
+Cycle  32: 2
+Cycle  33: 2
+Cycle  34: 2
+Cycle  35: 2
+Cycle  36: 2
+Cycle  37: 2
+Cycle  38: 2
+Cycle  39: 2
+Cycle  39: Wrote 1 into register 11
+Cycle  40: 2
+Cycle  40: Wrote 0 into register 21
+Cycle  41: 2
+Cycle  41: Wrote 0 into register 10
+Cycle  42: 2
+Cycle  42: Wrote 0 into register 20
+Cycle  43: 2
+Cycle  44: 2
+Cycle  45: 1
+Cycle  45: Wrote 5 into register 1
+Cycle  46: 2
+Cycle  46: Wrote 1 into register 2
+Cycle  47: 2
+Cycle  48: 2
+Cycle  49: 2
+Cycle  50: 2
+Cycle  50: Wrote 2 into register 2
+Cycle  51: 2
+Cycle  52: 2
+Cycle  53: 2
+Cycle  54: 2
+Cycle  54: Wrote 3 into register 2
+Cycle  55: 2
+Cycle  56: 2
+Cycle  57: 2
+Cycle  58: 2
+Cycle  58: Wrote 4 into register 2
+Cycle  59: 2
+Cycle  60: 2
+Cycle  61: 2
+Cycle  62: 2
+Cycle  62: Wrote 5 into register 2
+Cycle  63: 2
+Cycle  64: 2
+Cycle  64: Wrote 6 into register 1
+Cycle  65: 2
+Cycle  66: 2
+Cycle  67: 2
+Cycle  68: 2
+Cycle  69: 2
+Cycle  70: 2
+Cycle  71: 2
+Cycle  72: 2
+Cycle  73: 2
+Cycle  74: 2
+Cycle  75: 2
+Cycle  76: 2
+Cycle  77: 2
+Cycle  78: 2
+Cycle  79: 2
+Cycle  80: 2
+Cycle  81: 2
+Cycle  82: 2
+Cycle  83: 2
+Cycle  84: 2
+Cycle  85: 2
+Cycle  86: 2
+Cycle  87: 2
+Cycle  88: 2
+Cycle  89: 2
+Cycle  90: 2
+Cycle  91: 2
+Cycle  92: 2
+Cycle  93: 2
+Cycle  94: 2
+Cycle  95: 2
+Cycle  96: 2
+Cycle  97: 2
+Cycle  98: 2
+Cycle  99: 2
+Cycle 100: 2
+Cycle 101: 2
+Cycle 102: 2
+Cycle 103: 2
+Cycle 104: 2
+Cycle 105: 2
+Cycle 106: 2
+Cycle 107: 2
+Cycle 108: 2
+Cycle 109: 2
+Cycle 110: 2
+Cycle 111: 2
+Cycle 112: 2
+Cycle 113: 2
+Cycle 114: 2
+Cycle 115: 2
+Cycle 116: 2
+Cycle 117: 2
+Cycle 118: 2
+Cycle 119: 2
+Cycle 120: 2
+Cycle 121: 2
+Cycle 122: 2
+Cycle 123: 2
+Cycle 124: 2
+Cycle 125: 2
+Cycle 126: 2
+Cycle 127: 2
+Cycle 128: 2
+Cycle 129: 2
+Cycle 130: 2
+Cycle 131: 2
+Cycle 132: 2
+Cycle 133: 2
+Cycle 134: 2
+Cycle 135: 2
+Cycle 136: 2
+Cycle 137: 2
+Cycle 138: 2
+Cycle 139: 2
+Cycle 140: 2
+Cycle 141: 2
+Cycle 142: 2
+Cycle 143: 2
+Cycle 144: 2
+Cycle 145: 2
+Cycle 146: 2
+Cycle 147: 2
+============== Testing Mode ==============
+Reg  0:           0
+Reg  1:           6
+Reg  2:           5
+Reg  3:           0
+Reg  4:           0
+Reg  5:           0
+Reg  6:           0
+Reg  7:           0
+Reg  8:           0
+Reg  9:           0
+Reg 10:           0
+Reg 11:           1
+Reg 12:           0
+Reg 13:           0
+Reg 14:           0
+Reg 15:           0
+Reg 16:           0
+Reg 17:           0
+Reg 18:           0
+Reg 19:           0
+Reg 20:           0
+Reg 21:           0
+Reg 22:           0
+Reg 23:           0
+Reg 24:           0
+Reg 25:           0
+Reg 26:           0
+Reg 27:           0
+Reg 28:           0
+Reg 29:           0
+Reg 30:           0
+Reg 31:          26

@@ -1,0 +1,77 @@
+Cycle   0: 0
+Cycle   1: 0
+Cycle   2: 0
+Cycle   3: 0
+Cycle   4: 0
+Cycle   5: 0
+Cycle   6: 0
+Cycle   7: 0
+Cycle   8: 0
+Cycle   9: 0
+Cycle  10: 0
+Cycle  10: Wrote 4 into register 1
+Cycle  11: 0
+Cycle  11: Wrote 5 into register 2
+Cycle  12: 0
+Cycle  13: 0
+Cycle  14: 0
+Cycle  14: Wrote 4294967292 into register 3
+Cycle  15: 0
+Cycle  15: Wrote 4294967291 into register 4
+Cycle  16: 0
+Cycle  17: 0
+Cycle  18: 2
+Cycle  19: 0
+Cycle  19: Wrote 100 into register 31
+Cycle  20: 0
+Cycle  20: Wrote 17 into register 31
+Cycle  21: 0
+Cycle  22: 0
+Cycle  23: 0
+Cycle  23: Wrote 1 into register 10
+Cycle  24: 0
+Cycle  25: 0
+Cycle  25: Wrote 18 into register 10
+Cycle  26: 0
+Cycle  27: 0
+Cycle  28: 0
+Cycle  29: 0
+Cycle  30: 0
+Cycle  31: 0
+Cycle  32: 0
+Cycle  33: 0
+Cycle  34: 0
+Cycle  35: 0
+============== Testing Mode ==============
+Reg  0:           0
+Reg  1:           4
+Reg  2:           5
+Reg  3:  4294967292
+Reg  4:  4294967291
+Reg  5:           0
+Reg  6:           0
+Reg  7:           0
+Reg  8:           0
+Reg  9:           0
+Reg 10:          18
+Reg 11:           0
+Reg 12:           0
+Reg 13:           0
+Reg 14:           0
+Reg 15:           0
+Reg 16:           0
+Reg 17:           0
+Reg 18:           0
+Reg 19:           0
+Reg 20:           0
+Reg 21:           0
+Reg 22:           0
+Reg 23:           0
+Reg 24:           0
+Reg 25:           0
+Reg 26:           0
+Reg 27:           0
+Reg 28:           0
+Reg 29:           0
+Reg 30:           0
+Reg 31:          17

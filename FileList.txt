@@ -1,0 +1,23 @@
+./main.v
+./main_tb.v
+./processor/latches/dx_latch.v
+./processor/latches/fd_latch.v
+./processor/latches/mw_latch.v
+./processor/latches/xm_latch.v
+./processor/processor_main/processor.v
+./processor/processor_main/Provided Behavioral Components/alu.v
+./processor/processor_main/Provided Behavioral Components/dffe_ref.v
+./processor/processor_main/Provided Behavioral Components/divider.v
+./processor/processor_main/Provided Behavioral Components/multdiv.v
+./processor/processor_main/Provided Behavioral Components/multiplier.v
+./processor/processor_main/Provided Behavioral Components/regfile.v
+./processor/processor_main/RAM.v
+./processor/processor_main/ROM.v
+./processor/processor_main/Wrapper.v
+./processor/processor_main/Wrapper_tb.v
+./processor/utils/dffe_ref_neg.v
+./processor/utils/mux_2.v
+./processor/utils/mux_4.v
+./processor/utils/pc_reg.v
+./test.v
+./test_tb.v
