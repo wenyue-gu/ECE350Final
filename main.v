@@ -42,18 +42,10 @@ module main
     (* mark_debug = "true" *) wire [31:0] score_stored, reg30;
     
 
-
-<<<<<<< HEAD
 	assign reset = 1'd0;
     assign rwe_actual = write_status ? 1'd1 : rwe_inst;
 	assign rd_actual = write_status ? 5'd30 : rd_inst;
 	assign rData_actual = write_status ? score_to_add : rData_inst;
-=======
-	assign reset = 1'b0;
-    (* mark_debug = "true" *) assign rwe_actual = write_status ? 1'd1 : rwe_inst;
-	(* mark_debug = "true" *) assign rd_actual = write_status ? 5'd30 : rd_inst;
-	(* mark_debug = "true" *) assign rData_actual = write_status ? score_to_add : rData_inst;
->>>>>>> 261e75800ebc56d1daf82fe4fd97d0d493567d70
 
     // leds 
     integer clk_counter1, counter;
