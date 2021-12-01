@@ -28,8 +28,9 @@ module main
 	// 	#10 clk = ~clk; 
 
 	// TODO: change this 
-    reg [2:0] score_to_add;
-    wire write_status = (rwe_inst == 0 && score_to_add != 0 && was_writing == 0);
+    reg [31:0] score_to_add;
+    wire write_status = (rwe_inst == 0 && score_stored != 0);
+    // wire write_status = (rwe_inst == 0 && score_to_add != 0 && was_writing == 0);
     reg in1m;
 
     // Processor 
@@ -92,7 +93,7 @@ module main
 		// counter = 0;
 		in1m = in1;
         o1 = 1'b1;
-        score_to_add = 3'd0;
+        score_to_add = 32'd0;
         led0 = 1'b0;
         led1 = 1'b0;
         led2 = 1'b0;
@@ -127,11 +128,11 @@ module main
 		// 	$finish;
 
 		// led goes off after 1s if no hits 
-       if (o1==1'b1 && clk_counter1 >= 10000000) begin
+       if (o1==1'b1 && clk_counter1 >= 100000000) begin
             clk_counter1 <= 0;
             o1 <= 1'b0;
 		// led goes on after 2s	
-        end else if(o1==1'b0 && clk_counter1 >= 50000000) begin
+        end else if(o1==1'b0 && clk_counter1 >= 100000000) begin
             clk_counter1 <= 0;
             o1 <= 1'b1;
         end
@@ -140,59 +141,59 @@ module main
         if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
             o1 <= 1'b0;
             clk_counter1 <= 0;
-            score_to_add = score_to_add + 3'd1;
+            score_to_add = score_to_add + 32'd1;
         end
 
         clk_counter1 <= clk_counter1 + 1;
         in1m = in1;
 
-		if (score_stored % 6 == 3'd0)
+		if (score_stored % 6 == 32'd0)
             led0 <= 1'b1;
         else
             led0 <= 1'b0;
-        if (score_stored % 6 == 3'd1)
+        if (score_stored % 6 == 32'd1)
             led1 <= 1'b1;
         else
             led1 <= 1'b0;
-        if (score_stored % 6 == 3'd2)
+        if (score_stored % 6 == 32'd2)
             led2 <= 1'b1;
         else
             led2 <= 1'b0;
-        if (score_stored % 6 == 3'd3)
+        if (score_stored % 6 == 32'd3)
             led3 <= 1'b1;
         else
             led3 <= 1'b0;
-        if (score_stored % 6 == 3'd4)
+        if (score_stored % 6 == 32'd4)
             led4 <= 1'b1;
         else
             led4 <= 1'b0;
-        if (score_stored % 6 == 3'd5)
+        if (score_stored % 6 == 32'd5)
             led5 <= 1'b1;
         else
             led5 <= 1'b0;
 
 
-        if (score_to_add % 6 == 3'd0)
+        if (score_to_add % 6 == 32'd0)
             led6 <= 1'b1;
         else
             led6 <= 1'b0;
-        if (score_to_add % 6 == 3'd1)
+        if (score_to_add % 6 == 32'd1)
             led7 <= 1'b1;
         else
             led7 <= 1'b0;
-        if (score_to_add % 6 == 3'd2)
+        if (score_to_add % 6 == 32'd2)
             led8 <= 1'b1;
         else
             led8 <= 1'b0;
-        if (score_to_add % 6 == 3'd3)
+        if (score_to_add % 6 == 32'd3)
             led9 <= 1'b1;
         else
             led9 <= 1'b0;
-        if (score_to_add % 6 == 3'd4)
+        if (score_to_add % 6 == 32'd4)
             led10 <= 1'b1;
         else
             led10 <= 1'b0;
-        if (score_to_add % 6 == 3'd5)
+        if (score_to_add % 6 == 32'd5)
             led11 <= 1'b1;
         else
             led11 <= 1'b0;
