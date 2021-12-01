@@ -1,9 +1,9 @@
 module main
 (
-    input clk,
+    // input clk,
     input in5,
-    output reg o1,
-    input in1,
+    (* mark_debug = "true" *) output o1,
+    // (* mark_debug = "true" *) input in1,
 
 	output reg led0,
     output reg led1,
@@ -20,38 +20,43 @@ module main
 
 );
             
-    reg was_writing;
+    (* mark_debug = "true" *) reg was_writing;
     // Create the clock
-	// reg clk = 0;
-	// reg in1;
-	// always
-	// 	#10 clk = ~clk; 
+	reg clk = 0;
+	reg in1;
+	always
+		#10 clk = ~clk; 
 
 	// TODO: change this 
     (* mark_debug = "true" *) reg [31:0] score_to_add;
-    (* mark_debug = "true" *) wire write_status = (rwe_inst == 0 && score_stored != 0);
+    (* mark_debug = "true" *) wire write_status = (rwe_inst == 1'd0 && score_to_add != 32'd0 && was_writing == 1'd0);
     // wire write_status = (rwe_inst == 0 && score_to_add != 0 && was_writing == 0);
     (* mark_debug = "true" *) reg in1m;
 
     // Processor 
-	(* mark_debug = "true" *) wire rwe_actual, rwe_inst, mwe, reset;
-	wire[4:0] rd_inst, rd_actual, rs1, rs2;
-	wire[31:0] instAddr, instData, 
-		rData_inst, rData_actual, regA, regB,
+    wire reset, mwe;
+	(* mark_debug = "true" *) wire[4:0] rd_inst, rd_actual;
+    wire[4:0] rs1, rs2;
+	wire[31:0] instAddr, instData, regA, regB,
 		memAddr, memDataIn, memDataOut;
-    (* mark_debug = "true" *) wire [31:0] score_stored, reg30;
+	(* mark_debug = "true" *) wire rwe_actual, rwe_inst;
+    (* mark_debug = "true" *) wire [31:0] score_stored, reg30, rData_inst, rData_actual;
     
-
-	assign reset = 1'd0;
+	assign reset = 1'b0;
     assign rwe_actual = write_status ? 1'd1 : rwe_inst;
 	assign rd_actual = write_status ? 5'd30 : rd_inst;
 	assign rData_actual = write_status ? score_to_add : rData_inst;
 
     // leds 
-    integer clk_counter1, counter;
+    integer clk_counter1;
+    
+    wire clk125; 
+
+	reg[2:0] processorCounter = 0; 
+    assign clk125 = processorCounter[2];
 	
 	// Main Processing Unit
-	processor CPU(.clock(clk), .reset(reset), 
+	processor CPU(.clock(processorCounter), .reset(reset), 
 								
 		// ROM
 		.address_imem(instAddr), .q_imem(instData),
@@ -67,12 +72,12 @@ module main
 	
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({"main", ".mem"}))
-	InstMem(.clk(clk), 
+	InstMem(.clk(processorCounter), 
 		.addr(instAddr[11:0]), 
 		.dataOut(instData));
 	
 	// Register File
-	regfile RegisterFile(.clock(clk), 
+	regfile RegisterFile(.clock(processorCounter), 
 		.ctrl_writeEnable(rwe_actual), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd_actual),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
@@ -80,18 +85,20 @@ module main
 
 						
 	// Processor Memory (RAM)
-	RAM ProcMem(.clk(clk), 
+	RAM ProcMem(.clk(processorCounter), 
 		.wEn(mwe), 
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
 
+    reg light1;
+    assign o1 = light1;
 
     initial begin
         clk_counter1 = 0;
 		// counter = 0;
 		in1m = in1;
-        o1 = 1'b1;
+        light1 = 1'b1;
         score_to_add = 32'd0;
         led0 = 1'b0;
         led1 = 1'b0;
@@ -101,44 +108,43 @@ module main
         led5 = 1'b0;
         was_writing = 1'b0;
 
-        $dumpfile("./output.vcd");
-		// Module to capture and what level, 0 means all wires
-		$dumpvars(0, main);
-
-		// TODO:
-		// in1 = 1'd0;
+        $dumpfile("output.vdc");
+        $dumpvar(0, main);
     end
 
     always @(posedge clk) begin
 		// counter = counter + 1;
+        processorCounter <= processorCounter + 1;
 
-        // if (was_writing) begin
-		// 	score_to_add = 0;
-        //     was_writing <= 0;
-        // end
+    end
 
+    always @(posedge processorCounter) begin
+      if (was_writing) begin
+			score_to_add = 32'd0;
+            was_writing <= 1'b0;
+        end
 
 		// // TODO:
-		// if (clk_counter1 % 2 == 0) 
-        //     in1 <= ~in1;
+		if (processorCounter % 10 == 0) 
+            in1 <= ~in1;
 
-		$display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
+		// $display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
 		// if (counter == 100)  
 		// 	$finish;
 
 		// led goes off after 1s if no hits 
-       if (o1==1'b1 && clk_counter1 >= 100000000) begin
+       if (light1 == 1'b1 && clk_counter1 >= 25) begin
             clk_counter1 <= 0;
-            o1 <= 1'b0;
+            light1 <= 1'b0;
 		// led goes on after 2s	
-        end else if(o1==1'b0 && clk_counter1 >= 100000000) begin
+        end else if(light1==1'b0 && clk_counter1 >= 25) begin
             clk_counter1 <= 0;
-            o1 <= 1'b1;
+            light1 <= 1'b1;
         end
 
 		// if pressing status changed & pressed & lights on
-        if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
-            o1 <= 1'b0;
+        if (in1 != in1m && in1==1'b0 && light1==1'b1) begin
+            light1 <= 1'b0;
             clk_counter1 <= 0;
             score_to_add = score_to_add + 32'd1;
         end
@@ -197,9 +203,9 @@ module main
         else
             led11 <= 1'b0;
 
-        // if (write_status) begin
-        //     was_writing <= 1;
-		// end
+        if (write_status) begin
+            was_writing <= 1;
+		end
     end
 
 endmodule
