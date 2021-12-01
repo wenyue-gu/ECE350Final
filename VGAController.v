@@ -70,147 +70,147 @@ module VGAController(
 
 
 
-    //0
+    // //0
 
-	RAM2 #(		
-		.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
-		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "image0.mem"})) // Memory initialization
-	ImageData0(
-		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr0),				 // Color palette address
-		.wEn(1'b0)); 						 // We're always reading
+	// RAM2 #(		
+	// 	.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
+	// 	.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+	// 	.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
+	// 	.MEMFILE({FILES_PATH, "image0.mem"})) // Memory initialization
+	// ImageData0(
+	// 	.clk(clk), 						 // Falling edge of the 100 MHz clk
+	// 	.addr(imgAddress),					 // Image data address
+	// 	.dataOut(colorAddr0),				 // Color palette address
+	// 	.wEn(1'b0)); 						 // We're always reading
 
-	// Color Palette to Map Color Address to 12-Bit Color
-	wire[BITS_PER_COLOR-1:0] colorData0; // 12-bit color data at current pixel
+	// // Color Palette to Map Color Address to 12-Bit Color
+	// wire[BITS_PER_COLOR-1:0] colorData0; // 12-bit color data at current pixel
 
-	RAM2  #(
-		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-		.MEMFILE({FILES_PATH, "colors0.mem"}))  // Memory initialization
-	ColorPalette0(
-		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(colorAddr0),					       // Address from the ImageData RAM
-		.dataOut(colorData0),				       // Color at current pixel
-		.wEn(1'b0)); 						       // We're always reading
-
-
-    //1
-
-	RAM2  #(		
-		.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
-		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "image1.mem"})) // Memory initialization
-	ImageData1(
-		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr1),				 // Color palette address
-		.wEn(1'b0)); 						 // We're always reading
-
-	// Color Palette to Map Color Address to 12-Bit Color
-	wire[BITS_PER_COLOR-1:0] colorData1; // 12-bit color data at current pixel
-
-	RAM2  #(
-		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-		.MEMFILE({FILES_PATH, "colors1.mem"}))  // Memory initialization
-	ColorPalette1(
-		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(colorAddr1),					       // Address from the ImageData RAM
-		.dataOut(colorData1),				       // Color at current pixel
-		.wEn(1'b0)); 						       // We're always reading
+	// RAM2  #(
+	// 	.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
+	// 	.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
+	// 	.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
+	// 	.MEMFILE({FILES_PATH, "colors0.mem"}))  // Memory initialization
+	// ColorPalette0(
+	// 	.clk(clk), 							   	   // Rising edge of the 100 MHz clk
+	// 	.addr(colorAddr0),					       // Address from the ImageData RAM
+	// 	.dataOut(colorData0),				       // Color at current pixel
+	// 	.wEn(1'b0)); 						       // We're always reading
 
 
+    // //1
 
-    //2
+	// RAM2  #(		
+	// 	.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
+	// 	.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+	// 	.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
+	// 	.MEMFILE({FILES_PATH, "image1.mem"})) // Memory initialization
+	// ImageData1(
+	// 	.clk(clk), 						 // Falling edge of the 100 MHz clk
+	// 	.addr(imgAddress),					 // Image data address
+	// 	.dataOut(colorAddr1),				 // Color palette address
+	// 	.wEn(1'b0)); 						 // We're always reading
 
-	RAM2  #(		
-		.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
-		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "image2.mem"})) // Memory initialization
-	ImageData2(
-		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr2),				 // Color palette address
-		.wEn(1'b0)); 						 // We're always reading
+	// // Color Palette to Map Color Address to 12-Bit Color
+	// wire[BITS_PER_COLOR-1:0] colorData1; // 12-bit color data at current pixel
 
-	// Color Palette to Map Color Address to 12-Bit Color
-	wire[BITS_PER_COLOR-1:0] colorData2; // 12-bit color data at current pixel
-
-	RAM2  #(
-		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-		.MEMFILE({FILES_PATH, "colors2.mem"}))  // Memory initialization
-	ColorPalette2(
-		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(colorAddr2),					       // Address from the ImageData RAM
-		.dataOut(colorData2),				       // Color at current pixel
-		.wEn(1'b0)); 						       // We're always reading
+	// RAM2  #(
+	// 	.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
+	// 	.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
+	// 	.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
+	// 	.MEMFILE({FILES_PATH, "colors1.mem"}))  // Memory initialization
+	// ColorPalette1(
+	// 	.clk(clk), 							   	   // Rising edge of the 100 MHz clk
+	// 	.addr(colorAddr1),					       // Address from the ImageData RAM
+	// 	.dataOut(colorData1),				       // Color at current pixel
+	// 	.wEn(1'b0)); 						       // We're always reading
 
 
 
+    // //2
 
-    //3
+	// RAM2  #(		
+	// 	.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
+	// 	.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+	// 	.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
+	// 	.MEMFILE({FILES_PATH, "image2.mem"})) // Memory initialization
+	// ImageData2(
+	// 	.clk(clk), 						 // Falling edge of the 100 MHz clk
+	// 	.addr(imgAddress),					 // Image data address
+	// 	.dataOut(colorAddr2),				 // Color palette address
+	// 	.wEn(1'b0)); 						 // We're always reading
 
-	RAM2  #(		
-		.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
-		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "image3.mem"})) // Memory initialization
-	ImageData3(
-		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr3),				 // Color palette address
-		.wEn(1'b0)); 						 // We're always reading
+	// // Color Palette to Map Color Address to 12-Bit Color
+	// wire[BITS_PER_COLOR-1:0] colorData2; // 12-bit color data at current pixel
 
-	// Color Palette to Map Color Address to 12-Bit Color
-	wire[BITS_PER_COLOR-1:0] colorData3; // 12-bit color data at current pixel
-
-	RAM2  #(
-		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-		.MEMFILE({FILES_PATH, "colors3.mem"}))  // Memory initialization
-	ColorPalette3(
-		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(colorAddr3),					       // Address from the ImageData RAM
-		.dataOut(colorData3),				       // Color at current pixel
-		.wEn(1'b0)); 						       // We're always reading
+	// RAM2  #(
+	// 	.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
+	// 	.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
+	// 	.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
+	// 	.MEMFILE({FILES_PATH, "colors2.mem"}))  // Memory initialization
+	// ColorPalette2(
+	// 	.clk(clk), 							   	   // Rising edge of the 100 MHz clk
+	// 	.addr(colorAddr2),					       // Address from the ImageData RAM
+	// 	.dataOut(colorData2),				       // Color at current pixel
+	// 	.wEn(1'b0)); 						       // We're always reading
 
 
-    //4
 
-	RAM2  #(		
-		.DEPTH(PIXEL_COUNT), 				     // Set RAM2 depth to contain every pixel
-		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "image4.mem"})) // Memory initialization
-	ImageData4(
-		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr4),				 // Color palette address
-		.wEn(1'b0)); 						 // We're always reading
 
-	// Color Palette to Map Color Address to 12-Bit Color
-	wire[BITS_PER_COLOR-1:0] colorData4; // 12-bit color data at current pixel
+    // //3
 
-	RAM2 #(
-		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-		.MEMFILE({FILES_PATH, "colors4.mem"}))  // Memory initialization
-	ColorPalette4(
-		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(colorAddr4),					       // Address from the ImageData RAM
-		.dataOut(colorData4),				       // Color at current pixel
-		.wEn(1'b0)); 						       // We're always reading
+	// RAM2  #(		
+	// 	.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
+	// 	.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+	// 	.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
+	// 	.MEMFILE({FILES_PATH, "image3.mem"})) // Memory initialization
+	// ImageData3(
+	// 	.clk(clk), 						 // Falling edge of the 100 MHz clk
+	// 	.addr(imgAddress),					 // Image data address
+	// 	.dataOut(colorAddr3),				 // Color palette address
+	// 	.wEn(1'b0)); 						 // We're always reading
+
+	// // Color Palette to Map Color Address to 12-Bit Color
+	// wire[BITS_PER_COLOR-1:0] colorData3; // 12-bit color data at current pixel
+
+	// RAM2  #(
+	// 	.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
+	// 	.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
+	// 	.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
+	// 	.MEMFILE({FILES_PATH, "colors3.mem"}))  // Memory initialization
+	// ColorPalette3(
+	// 	.clk(clk), 							   	   // Rising edge of the 100 MHz clk
+	// 	.addr(colorAddr3),					       // Address from the ImageData RAM
+	// 	.dataOut(colorData3),				       // Color at current pixel
+	// 	.wEn(1'b0)); 						       // We're always reading
+
+
+    // //4
+
+	// RAM2  #(		
+	// 	.DEPTH(PIXEL_COUNT), 				     // Set RAM2 depth to contain every pixel
+	// 	.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+	// 	.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
+	// 	.MEMFILE({FILES_PATH, "image4.mem"})) // Memory initialization
+	// ImageData4(
+	// 	.clk(clk), 						 // Falling edge of the 100 MHz clk
+	// 	.addr(imgAddress),					 // Image data address
+	// 	.dataOut(colorAddr4),				 // Color palette address
+	// 	.wEn(1'b0)); 						 // We're always reading
+
+	// // Color Palette to Map Color Address to 12-Bit Color
+	// wire[BITS_PER_COLOR-1:0] colorData4; // 12-bit color data at current pixel
+
+	// RAM2 #(
+	// 	.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
+	// 	.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
+	// 	.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
+	// 	.MEMFILE({FILES_PATH, "colors4.mem"}))  // Memory initialization
+	// ColorPalette4(
+	// 	.clk(clk), 							   	   // Rising edge of the 100 MHz clk
+	// 	.addr(colorAddr4),					       // Address from the ImageData RAM
+	// 	.dataOut(colorData4),				       // Color at current pixel
+	// 	.wEn(1'b0)); 						       // We're always reading
 
 
 
@@ -371,16 +371,16 @@ module VGAController(
 
 	always @(posedge clk) begin
 		pixCounter <= pixCounter + 1; // Since the reg is only 3 bits, it will reset every 8 cycles
-        if(score % 5 == 32'd0) 
-            colorOut = colorData0; 
-        if(score % 5 ==32'd1) 
-            colorOut = colorData1; 
-        if(score % 5 ==32'd2) 
-            colorOut = colorData2; 
-        if(score % 5 ==32'd3) 
-            colorOut = colorData3; 
-        if(score % 5 ==32'd4) 
-            colorOut = colorData4; 
+        // if(score % 5 == 32'd0) 
+        //     colorOut = colorData0; 
+        // if(score % 5 ==32'd1) 
+        //     colorOut = colorData1; 
+        // if(score % 5 ==32'd2) 
+        //     colorOut = colorData2; 
+        // if(score % 5 ==32'd3) 
+        //     colorOut = colorData3; 
+        // if(score % 5 ==32'd4) 
+        //     colorOut = colorData4; 
         // if(score % 10 ==5) 
         //     colorOut = colorData5; 
         // if(score % 10 ==6) 
@@ -391,6 +391,93 @@ module VGAController(
         //     colorOut = colorData8; 
         // if(score % 10 ==9) 
         //     colorOut = colorData9; 
+        if (x < 9'd160 && x> 9'd0 && y<8'd160 && y>8'd0) begin
+            if(score > 32'd0) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd320 && x> 9'd159 && y<8'd160 && y>8'd0) begin
+            if(score > 32'd1) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd480 && x> 9'd319 && y<8'd160 && y>8'd0) begin
+            if(score > 32'd2） begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd640 && x> 9'd479 && y<8'd160 && y>8'd0) begin
+            if(score > 32'd3) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        
+        if (x < 9'd160 && x> 9'd0 && y<8'd320 && y>8'd159) begin
+            if(score > 32'd4) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd320 && x> 9'd159 && y<8'd320 && y>8'd159) begin
+            if(score > 32'd5) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd480 && x> 9'd319 && y<8'd320 && y>8'd159) begin
+            if(score > 32'd6） begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd640 && x> 9'd479 && y<8'd320 && y>8'd159) begin
+            if(score > 32'd7) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+
+        
+        if (x < 9'd160 && x> 9'd0 && y<8'd480 && y>8'd319) begin
+            if(score > 32'd8) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd320 && x> 9'd159 && y<8'd480 && y>8'd319) begin
+            if(score > 32'd9) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd480 && x> 9'd319 && y<8'd480 && y>8'd319) begin
+            if(score > 32'd10） begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 9'd640 && x> 9'd479 && y<8'd480 && y>8'd319) begin
+            if(score > 32'd11) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
     end
     
 
