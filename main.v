@@ -28,25 +28,25 @@ module main
 	// 	#10 clk = ~clk; 
 
 	// TODO: change this 
-    reg [31:0] score_to_add;
-    wire write_status = (rwe_inst == 0 && score_stored != 0);
+    (* mark_debug = "true" *) reg [31:0] score_to_add;
+    (* mark_debug = "true" *) wire write_status = (rwe_inst == 0 && score_stored != 0);
     // wire write_status = (rwe_inst == 0 && score_to_add != 0 && was_writing == 0);
-    reg in1m;
+    (* mark_debug = "true" *) reg in1m;
 
     // Processor 
-	wire rwe_actual, rwe_inst, mwe, reset;
+	(* mark_debug = "true" *) wire rwe_actual, rwe_inst, mwe, reset;
 	wire[4:0] rd_inst, rd_actual, rs1, rs2;
 	wire[31:0] instAddr, instData, 
 		rData_inst, rData_actual, regA, regB,
-		memAddr, memDataIn, memDataOut, reg30;
-    wire [31:0] score_stored;
+		memAddr, memDataIn, memDataOut;
+    (* mark_debug = "true" *) wire [31:0] score_stored, reg30;
     
 
 
-	assign reset = in5;
-    assign rwe_actual = write_status ? 1'd1 : rwe_inst;
-	assign rd_actual = write_status ? 5'd30 : rd_inst;
-	assign rData_actual = write_status ? score_to_add : rData_inst;
+	assign reset = 1'b0;
+    (* mark_debug = "true" *) assign rwe_actual = write_status ? 1'd1 : rwe_inst;
+	(* mark_debug = "true" *) assign rd_actual = write_status ? 5'd30 : rd_inst;
+	(* mark_debug = "true" *) assign rData_actual = write_status ? score_to_add : rData_inst;
 
     // leds 
     integer clk_counter1, counter;
