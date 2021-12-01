@@ -75,7 +75,8 @@ module test (
             if (o1==1'b1 && counter1 >= 100000000) begin
                 counter1 <= 0;
                 o1 <= 1'b0;
-                score <= score-32'd1;
+                if (score>32'd0)
+                    score <= score-32'd1;
             end else if(o1==1'b0 && counter1 >= 250000000) begin
                 counter1 <= 0;
                 o1 <= 1'b1;
@@ -90,7 +91,8 @@ module test (
             if (o2==1'b1 && counter2 >= 50000000) begin
                 counter2 <= 0;
                 o2 <= 1'b0;
-                //score <= score-32'd1;
+                // if (score>32'd0)
+                //     score <= score-32'd1;
             end else if(o2==1'b0 && counter2 >= 350000000) begin
                 counter2 <= 0;
                 o2 <= 1'b1;
@@ -105,7 +107,8 @@ module test (
             if (o3==1'b1 && counter3 >= 50000000) begin
                 counter3 <= 0;
                 o3 <= 1'b0;
-                //score <= score-32'd1;
+                // if (score>32'd0)
+                //     score <= score-32'd1;
             end else if(o3==1'b0 && counter3 >= 400000000) begin
                 counter3 <= 0;
                 o3 <= 1'b1;
@@ -120,7 +123,8 @@ module test (
             if (o4==1'b1 && counter4 >= 50000000) begin
                 counter4 <= 0;
                 o4 <= 1'b0;
-                //score <= score-32'd1;
+                // if (score>32'd0)
+                //     score <= score-32'd1;
             end else if(o4==1'b0 && counter4 >= 350000000) begin
                 counter4 <= 0;
                 o4 <= 1'b1;
@@ -174,6 +178,7 @@ module test (
         //button 5 (start game)
         else if (in5==1'b0 || in1==1'b0 ) begin
                 ingame <= 1'b1;
+                score <= 32'd0;
                 o1 = 1'b0;
                 o2 = 1'b0;
                 o3 = 1'b0;
