@@ -158,6 +158,7 @@ module main
             led5 <= 1'b1;
         else
             led5 <= 1'b0;
+
                 
         if (was_writing) begin
 			score_to_add = 0;
