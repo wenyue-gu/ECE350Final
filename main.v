@@ -1,10 +1,9 @@
 module main
 (
-	//TODO:
-    // input clk,
+    input clk,
     input in5,
     output reg o1,
-    // input in1,
+    input in1,
 
 	output reg led0,
     output reg led1,
@@ -13,16 +12,17 @@ module main
     output reg led4,
     output reg led5
 );
-
+            
+    reg was_writing;
     // Create the clock
-	reg clk = 0;
-	reg in1;
-	always
-		#10 clk = ~clk; 
+	// reg clk = 0;
+	// reg in1;
+	// always
+	// 	#10 clk = ~clk; 
 
 	// TODO: change this 
     reg [2:0] score_to_add;
-    wire write_status = (rwe_inst == 0 && score_to_add != 0);
+    wire write_status = (rwe_inst == 0 && score_to_add != 0 && was_writing == 0);
     reg in1m;
 
     // Processor 
@@ -30,9 +30,8 @@ module main
 	wire[4:0] rd_inst, rd_actual, rs1, rs2;
 	wire[31:0] instAddr, instData, 
 		rData_inst, rData_actual, regA, regB,
-		memAddr, memDataIn, memDataOut, reg1, reg30;
-        
-    reg [31:0] was_writing;
+		memAddr, memDataIn, memDataOut, reg30;
+
 
 	assign reset = in5;
     assign rwe_actual = write_status ? 1'd1 : rwe_inst;
@@ -41,9 +40,6 @@ module main
 
     // leds 
     integer clk_counter1, counter;
-
-	// // ADD YOUR MEMORY FILE HERE
-	// localparam INSTR_FILE = "";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clk), .reset(reset), 
@@ -71,9 +67,9 @@ module main
 		.ctrl_writeEnable(rwe_actual), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd_actual),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
-		.data_writeReg(rData_actual), .data_readRegA(regA), .data_readRegB(regB), .data_score(reg1), .data_rstatus(reg30));
+		.data_writeReg(rData_actual), .data_readRegA(regA), .data_readRegB(regB), .data_score(score_stored), .data_rstatus(reg30));
 
-    wire [31:0] score_stored = reg1;
+    wire [31:0] score_stored;
 						
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(clk), 
@@ -86,7 +82,7 @@ module main
     initial begin
         clk_counter1 = 0;
 		counter = 0;
-		in1m = in1;
+		// in1m = in1;
         o1 = 1'b1;
         score_to_add = 3'd0;
         led0 = 1'b0;
@@ -95,41 +91,43 @@ module main
         led3 = 1'b0;
         led4 = 1'b0;
         led5 = 1'b0;
+        was_writing = 1'b0;
 
 		// TODO:
-		in1 = 1'd0;
+		// in1 = 1'd0;
     end
 
     always @(posedge clk) begin
 		counter = counter + 1;
 
-        if (write_status) begin
-            was_writing = 1;
-		end
+        if (was_writing) begin
+			score_to_add = 0;
+            was_writing <= 0;
+        end
 
-		// TODO:
-		if (clk_counter1 % 13 == 0) 
-            in1 <= ~in1;
 
-		$display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
-		if (counter ==100)  
-			$finish;
+		// // TODO:
+		// if (clk_counter1 % 2 == 0) 
+        //     in1 <= ~in1;
 
+		// $display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
+		// if (counter == 100)  
+		// 	$finish;
 
 		// led goes off after 1s if no hits 
-       if (o1==1'b1 && clk_counter1 >= 10) begin
+       if (o1==1'b1 && clk_counter1 >= 100000000) begin
             clk_counter1 <= 0;
             o1 <= 1'b0;
-		// led goes on after 0.5s	
-        end else if(o1==1'b0 && clk_counter1 >= 15) begin
+		// led goes on after 2s	
+        end else if(o1==1'b0 && clk_counter1 >= 200000000) begin
             clk_counter1 <= 0;
             o1 <= 1'b1;
         end
 
 		// if pressing status changed & pressed & lights on
         if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
-            o1 = 1'b0;
-            clk_counter1 = 0;
+            o1 <= 1'b0;
+            clk_counter1 <= 0;
             score_to_add = score_to_add + 3'd1;
         end
 
@@ -161,10 +159,9 @@ module main
         else
             led5 <= 1'b0;
 
-        if (was_writing) begin
-			score_to_add = 0;
-            was_writing = 0;
-        end
+        if (write_status) begin
+            was_writing <= 1;
+		end
     end
 
 endmodule

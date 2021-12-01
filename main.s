@@ -5,8 +5,6 @@ j1: bex j2
 nop
 nop
 j j1
-nop
-nop
 j2: add $r1, $r1, $r30
 nop
 nop
