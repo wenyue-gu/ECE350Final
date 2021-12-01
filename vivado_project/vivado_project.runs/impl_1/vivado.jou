@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Nov 30 11:35:36 2021
-# Process ID: 24852
+# Start of session at: Tue Nov 30 22:25:19 2021
+# Process ID: 24048
 # Current directory: C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/impl_1
-# Command line: vivado.exe -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
-# Log file: C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/impl_1/main.vdi
+# Command line: vivado.exe -log test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source test.tcl -notrace
+# Log file: C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/impl_1/test.vdi
 # Journal file: C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source main.tcl -notrace
+source test.tcl -notrace
