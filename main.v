@@ -83,7 +83,7 @@ module main
     initial begin
         clk_counter1 = 0;
 		// counter = 0;
-		// in1m = in1;
+		in1m = in1;
         o1 = 1'b1;
         score_to_add = 3'd0;
         led0 = 1'b0;
@@ -94,6 +94,10 @@ module main
         led5 = 1'b0;
         was_writing = 1'b0;
 
+        $dumpfile("./output.vcd");
+		// Module to capture and what level, 0 means all wires
+		$dumpvars(0, main);
+
 		// TODO:
 		// in1 = 1'd0;
     end
@@ -101,17 +105,17 @@ module main
     always @(posedge clk) begin
 		// counter = counter + 1;
 
-        if (was_writing) begin
-			score_to_add = 0;
-            was_writing <= 0;
-        end
+        // if (was_writing) begin
+		// 	score_to_add = 0;
+        //     was_writing <= 0;
+        // end
 
 
 		// // TODO:
 		// if (clk_counter1 % 2 == 0) 
         //     in1 <= ~in1;
 
-		// $display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
+		$display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
 		// if (counter == 100)  
 		// 	$finish;
 
@@ -160,9 +164,9 @@ module main
         else
             led5 <= 1'b0;
 
-        if (write_status) begin
-            was_writing <= 1;
-		end
+        // if (write_status) begin
+        //     was_writing <= 1;
+		// end
     end
 
 endmodule

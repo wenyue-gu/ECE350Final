@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec  1 12:21:01 2021
+| Date         : Wed Dec  1 13:21:22 2021
 | Host         : P2-07 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     8 |
-|    Minimum number of control sets                        |     8 |
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    14 |
+| Unused register locations in slices containing registers |    15 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     8 |
+| Total control sets |     9 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     2 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     5 |
+| >= 16              |     6 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             212 |           68 |
+| No           | No                    | No                     |             211 |           64 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              44 |           12 |
+| No           | Yes                   | No                     |              44 |           13 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             108 |           52 |
-| Yes          | Yes                   | No                     |               6 |            2 |
+| Yes          | No                    | Yes                    |             140 |           72 |
+| Yes          | Yes                   | No                     |               6 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,14 +73,15 @@ Table of Contents
 +----------------+---------------------------------+-----------------------------------+------------------+----------------+--------------+
 |  Clock Signal  |          Enable Signal          |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------------------------+-----------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |                                 | CPU/dx/loop[30].dpr3/q_reg_1      |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG | CPU/fd/loop[30].dpr1/q_reg_1    | CPU/dx/loop[30].dpr3/q_reg_2      |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG |                                 | CPU/dx/loop[28].dpr3/q_reg_1      |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | CPU/fd/loop[30].dpr1/q_reg_1    | CPU/dx/loop[28].dpr3/q_reg_2      |                3 |              6 |         2.00 |
 |  clk_IBUF_BUFG | CPU/fd/loop[30].dpr1/q_reg_1    | in5_IBUF                          |                4 |             12 |         3.00 |
-| ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/q_reg_2[0] | in5_IBUF                          |               19 |             32 |         1.68 |
-| ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/I5         | in5_IBUF                          |               14 |             32 |         2.29 |
-| ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/E[0]       | in5_IBUF                          |               15 |             32 |         2.13 |
-|  clk_IBUF_BUFG |                                 | CPU/math/inner_result0_carry__6_0 |               10 |             38 |         3.80 |
-|  clk_IBUF_BUFG |                                 |                                   |               68 |            212 |         3.12 |
+| ~clk_IBUF_BUFG | CPU/mw/loop[22].dpr0/I35        | in5_IBUF                          |               19 |             32 |         1.68 |
+| ~clk_IBUF_BUFG | CPU/mw/loop[22].dpr0/I5         | in5_IBUF                          |               17 |             32 |         1.88 |
+| ~clk_IBUF_BUFG | CPU/mw/loop[22].dpr0/E[0]       | in5_IBUF                          |               15 |             32 |         2.13 |
+| ~clk_IBUF_BUFG | CPU/mw/loop[22].dpr0/q_reg_4[0] | in5_IBUF                          |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG |                                 | CPU/math/inner_result0_carry__6_0 |               11 |             38 |         3.45 |
+|  clk_IBUF_BUFG |                                 |                                   |               64 |            211 |         3.30 |
 +----------------+---------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 
