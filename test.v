@@ -176,7 +176,8 @@ module test (
         end 
         
         //button 5 (start game)
-        else if (in5==1'b0 || in1==1'b0 ) begin
+        else begin
+            if (in5==1'b0 || in1==1'b0 ) begin
                 ingame <= 1'b1;
                 score <= 32'd0;
                 o1 = 1'b0;
@@ -185,6 +186,7 @@ module test (
                 o4 = 1'b0;
                 o5 = 1'b0;
             end
+        end
     end
 
     VGAController VGA(ingame, score,clk,reset, hSync, vSync,VGA_R,VGA_G, VGA_B,ps2_clk,ps2_data);
