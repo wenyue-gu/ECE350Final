@@ -10,7 +10,14 @@ module main
     output reg led2,
     output reg led3,
     output reg led4,
-    output reg led5
+    output reg led5,
+    output reg led6,
+    output reg led7,
+    output reg led8,
+    output reg led9,
+    output reg led10,
+    output reg led11
+
 );
             
     reg was_writing;
@@ -120,7 +127,7 @@ module main
 		// 	$finish;
 
 		// led goes off after 1s if no hits 
-       if (o1==1'b1 && clk_counter1 >= 100000000) begin
+       if (o1==1'b1 && clk_counter1 >= 10000000) begin
             clk_counter1 <= 0;
             o1 <= 1'b0;
 		// led goes on after 2s	
@@ -163,6 +170,32 @@ module main
             led5 <= 1'b1;
         else
             led5 <= 1'b0;
+
+
+        if (score_to_add % 6 == 3'd0)
+            led6 <= 1'b1;
+        else
+            led6 <= 1'b0;
+        if (score_to_add % 6 == 3'd1)
+            led7 <= 1'b1;
+        else
+            led7 <= 1'b0;
+        if (score_to_add % 6 == 3'd2)
+            led8 <= 1'b1;
+        else
+            led8 <= 1'b0;
+        if (score_to_add % 6 == 3'd3)
+            led9 <= 1'b1;
+        else
+            led9 <= 1'b0;
+        if (score_to_add % 6 == 3'd4)
+            led10 <= 1'b1;
+        else
+            led10 <= 1'b0;
+        if (score_to_add % 6 == 3'd5)
+            led11 <= 1'b1;
+        else
+            led11 <= 1'b0;
 
         // if (write_status) begin
         //     was_writing <= 1;
