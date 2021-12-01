@@ -81,7 +81,7 @@ module main
 
     initial begin
         clk_counter1 = 0;
-		counter = 0;
+		// counter = 0;
 		// in1m = in1;
         o1 = 1'b1;
         score_to_add = 3'd0;
@@ -98,7 +98,7 @@ module main
     end
 
     always @(posedge clk) begin
-		counter = counter + 1;
+		// counter = counter + 1;
 
         if (was_writing) begin
 			score_to_add = 0;
@@ -119,7 +119,7 @@ module main
             clk_counter1 <= 0;
             o1 <= 1'b0;
 		// led goes on after 2s	
-        end else if(o1==1'b0 && clk_counter1 >= 200000000) begin
+        end else if(o1==1'b0 && clk_counter1 >= 50000000) begin
             clk_counter1 <= 0;
             o1 <= 1'b1;
         end

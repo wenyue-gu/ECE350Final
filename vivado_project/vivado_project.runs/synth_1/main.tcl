@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/synth_1/main.tcl"
+  variable script "C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/main.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,30 +76,30 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.cache/wt [current_project]
-set_property parent.project_path C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.cache/wt [current_project]
+set_property parent.project_path C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.cache/ip [current_project]
+set_property ip_output_repo c:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/cadyz/Documents/350Project/main.mem
+read_mem C:/Users/zz160/Desktop/ECE350Final/main.mem
 read_verilog -library xil_defaultlib {
-  C:/Users/cadyz/Documents/350Project/processor/processor_main/RAM.v
-  C:/Users/cadyz/Documents/350Project/processor/processor_main/ROM.v
-  {C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/alu.v}
-  {C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/dffe_ref.v}
-  C:/Users/cadyz/Documents/350Project/processor/latches/dx_latch.v
-  C:/Users/cadyz/Documents/350Project/processor/latches/fd_latch.v
-  C:/Users/cadyz/Documents/350Project/processor/utils/mux_2.v
-  C:/Users/cadyz/Documents/350Project/processor/utils/mux_4.v
-  C:/Users/cadyz/Documents/350Project/processor/latches/mw_latch.v
-  C:/Users/cadyz/Documents/350Project/processor/utils/pc_reg.v
-  C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v
-  {C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/regfile.v}
-  C:/Users/cadyz/Documents/350Project/processor/latches/xm_latch.v
-  C:/Users/cadyz/Documents/350Project/main.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/RAM.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/ROM.v
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/alu.v}
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/dffe_ref.v}
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/dx_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/fd_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_2.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_4.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/mw_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/pc_reg.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/regfile.v}
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/xm_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/main.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -110,8 +110,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/cadyz/Documents/350Project/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/cadyz/Documents/350Project/constraints.xdc]
+read_xdc C:/Users/zz160/Desktop/ECE350Final/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec  1 12:13:38 2021
-| Host         : DESKTOP-VPIQUA3 running 64-bit major release  (build 9200)
+| Date         : Wed Dec  1 12:21:01 2021
+| Host         : P2-07 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
 | Device       : xc7a100t
@@ -76,9 +76,9 @@ Table of Contents
 |  clk_IBUF_BUFG |                                 | CPU/dx/loop[30].dpr3/q_reg_1      |                2 |              6 |         3.00 |
 |  clk_IBUF_BUFG | CPU/fd/loop[30].dpr1/q_reg_1    | CPU/dx/loop[30].dpr3/q_reg_2      |                2 |              6 |         3.00 |
 |  clk_IBUF_BUFG | CPU/fd/loop[30].dpr1/q_reg_1    | in5_IBUF                          |                4 |             12 |         3.00 |
+| ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/q_reg_2[0] | in5_IBUF                          |               19 |             32 |         1.68 |
 | ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/I5         | in5_IBUF                          |               14 |             32 |         2.29 |
 | ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/E[0]       | in5_IBUF                          |               15 |             32 |         2.13 |
-| ~clk_IBUF_BUFG | CPU/mw/loop[23].dpr0/q_reg_2[0] | in5_IBUF                          |               19 |             32 |         1.68 |
 |  clk_IBUF_BUFG |                                 | CPU/math/inner_result0_carry__6_0 |               10 |             38 |         3.80 |
 |  clk_IBUF_BUFG |                                 |                                   |               68 |            212 |         3.12 |
 +----------------+---------------------------------+-----------------------------------+------------------+----------------+--------------+

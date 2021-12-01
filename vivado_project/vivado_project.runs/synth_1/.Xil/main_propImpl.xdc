@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/cadyz/Documents/350Project/constraints.xdc rfile:../../../../constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/zz160/Desktop/ECE350Final/constraints.xdc rfile:../../../../constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets in1_IBUF]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

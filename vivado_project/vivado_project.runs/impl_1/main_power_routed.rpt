@@ -1,0 +1,383 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date             : Wed Dec  1 12:21:30 2021
+| Host             : P2-07 running 64-bit major release  (build 9200)
+| Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
+| Design           : main
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 19.809 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 19.193                           |
+| Device Static (W)        | 0.616                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 115.4                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     4.499 |     1483 |       --- |             --- |
+|   LUT as Logic |     4.100 |      541 |     63400 |            0.85 |
+|   Register     |     0.223 |      370 |    126800 |            0.29 |
+|   CARRY4       |     0.171 |       76 |     15850 |            0.48 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |      393 |       --- |             --- |
+| Signals        |     5.285 |      885 |       --- |             --- |
+| Block RAM      |     0.644 |        5 |       135 |            3.70 |
+| I/O            |     8.765 |       10 |       210 |            4.76 |
+| Static Power   |     0.616 |          |           |                 |
+| Total          |    19.809 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |    10.807 |      10.385 |      0.422 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.394 |       0.321 |      0.073 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     2.483 |       2.479 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.065 |       0.050 |      0.014 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------+-----------+
+| Name                | Power (W) |
++---------------------+-----------+
+| main                |    19.193 |
+|   CPU               |     7.804 |
+|     add_one         |     0.091 |
+|     dx              |     2.260 |
+|       loop[0].dpc1  |     0.005 |
+|       loop[0].dpc2  |     0.006 |
+|       loop[10].dpc1 |     0.003 |
+|       loop[10].dpc2 |     0.038 |
+|       loop[11].dpc1 |     0.052 |
+|       loop[11].dpc2 |     0.004 |
+|       loop[12].dpc1 |     0.003 |
+|       loop[12].dpc2 |     0.054 |
+|       loop[13].dpc1 |     0.045 |
+|       loop[13].dpc2 |     0.018 |
+|       loop[13].dpr3 |     0.175 |
+|       loop[14].dpc1 |     0.004 |
+|       loop[14].dpc2 |     0.047 |
+|       loop[15].dpc1 |     0.003 |
+|       loop[15].dpc2 |     0.004 |
+|       loop[16].dpc1 |     0.004 |
+|       loop[16].dpc2 |     0.003 |
+|       loop[17].dpc1 |     0.004 |
+|       loop[17].dpc2 |     0.003 |
+|       loop[18].dpc1 |     0.003 |
+|       loop[18].dpc2 |     0.003 |
+|       loop[19].dpc1 |     0.046 |
+|       loop[19].dpc2 |     0.005 |
+|       loop[1].dpc1  |     0.004 |
+|       loop[1].dpc2  |     0.003 |
+|       loop[20].dpc1 |     0.004 |
+|       loop[20].dpc2 |     0.004 |
+|       loop[21].dpc1 |     0.004 |
+|       loop[21].dpc2 |     0.048 |
+|       loop[22].dpc1 |     0.002 |
+|       loop[22].dpc2 |     0.002 |
+|       loop[23].dpc1 |     0.042 |
+|       loop[23].dpc2 |     0.004 |
+|       loop[23].dpr3 |     0.106 |
+|       loop[24].dpc1 |     0.004 |
+|       loop[24].dpc2 |     0.004 |
+|       loop[25].dpc1 |     0.040 |
+|       loop[25].dpc2 |     0.019 |
+|       loop[26].dpc1 |     0.003 |
+|       loop[26].dpc2 |     0.005 |
+|       loop[27].dpc1 |     0.002 |
+|       loop[27].dpc2 |     0.003 |
+|       loop[27].dpr3 |     0.378 |
+|       loop[28].dpc1 |     0.002 |
+|       loop[28].dpc2 |     0.048 |
+|       loop[28].dpr3 |     0.146 |
+|       loop[29].dpc1 |     0.006 |
+|       loop[29].dpc2 |     0.046 |
+|       loop[29].dpr3 |     0.322 |
+|       loop[2].dpc1  |     0.003 |
+|       loop[2].dpc2  |     0.003 |
+|       loop[30].dpc1 |     0.004 |
+|       loop[30].dpc2 |     0.005 |
+|       loop[30].dpr3 |     0.190 |
+|       loop[3].dpc1  |     0.004 |
+|       loop[3].dpc2  |     0.004 |
+|       loop[4].dpc1  |     0.004 |
+|       loop[4].dpc2  |     0.033 |
+|       loop[5].dpc1  |     0.050 |
+|       loop[5].dpc2  |     0.036 |
+|       loop[6].dpc1  |     0.004 |
+|       loop[6].dpc2  |     0.051 |
+|       loop[7].dpc1  |     0.003 |
+|       loop[7].dpc2  |     0.032 |
+|       loop[8].dpc1  |     0.005 |
+|       loop[8].dpc2  |     0.004 |
+|       loop[9].dpc1  |     0.003 |
+|       loop[9].dpc2  |     0.038 |
+|     fd              |     0.738 |
+|       loop[13].dpr1 |     0.274 |
+|       loop[23].dpr1 |     0.190 |
+|       loop[27].dpr1 |     0.029 |
+|       loop[28].dpr1 |     0.019 |
+|       loop[29].dpr1 |     0.018 |
+|       loop[30].dpr1 |     0.208 |
+|     math            |     0.136 |
+|     mw              |     3.625 |
+|       loop[0].dpc1  |     0.073 |
+|       loop[0].dpc2  |     0.006 |
+|       loop[0].dpr0  |     0.003 |
+|       loop[10].dpc1 |     0.036 |
+|       loop[10].dpc2 |     0.029 |
+|       loop[11].dpc1 |     0.041 |
+|       loop[11].dpc2 |     0.029 |
+|       loop[12].dpc1 |     0.021 |
+|       loop[12].dpc2 |     0.029 |
+|       loop[13].dpc1 |     0.028 |
+|       loop[13].dpc2 |     0.034 |
+|       loop[13].dpr0 |     0.168 |
+|       loop[14].dpc1 |     0.037 |
+|       loop[14].dpc2 |     0.023 |
+|       loop[15].dpc1 |     0.076 |
+|       loop[15].dpc2 |     0.030 |
+|       loop[16].dpc1 |     0.087 |
+|       loop[16].dpc2 |     0.030 |
+|       loop[17].dpc1 |     0.037 |
+|       loop[17].dpc2 |     0.028 |
+|       loop[18].dpc1 |     0.064 |
+|       loop[18].dpc2 |     0.024 |
+|       loop[19].dpc1 |     0.039 |
+|       loop[19].dpc2 |     0.026 |
+|       loop[1].dpc1  |     0.078 |
+|       loop[1].dpc2  |     0.012 |
+|       loop[1].dpr0  |     0.115 |
+|       loop[20].dpc1 |     0.031 |
+|       loop[20].dpc2 |     0.023 |
+|       loop[21].dpc1 |     0.038 |
+|       loop[21].dpc2 |     0.029 |
+|       loop[22].dpc1 |     0.037 |
+|       loop[22].dpc2 |     0.026 |
+|       loop[23].dpc1 |     0.036 |
+|       loop[23].dpc2 |     0.021 |
+|       loop[23].dpr0 |     0.863 |
+|       loop[24].dpc1 |     0.045 |
+|       loop[24].dpc2 |     0.030 |
+|       loop[25].dpc1 |     0.022 |
+|       loop[25].dpc2 |     0.029 |
+|       loop[26].dpc1 |     0.038 |
+|       loop[26].dpc2 |     0.024 |
+|       loop[27].dpc1 |     0.081 |
+|       loop[27].dpc2 |     0.029 |
+|       loop[27].dpr0 |     0.099 |
+|       loop[28].dpc1 |     0.035 |
+|       loop[28].dpc2 |     0.032 |
+|       loop[29].dpc1 |     0.034 |
+|       loop[29].dpc2 |     0.021 |
+|       loop[29].dpr0 |     0.097 |
+|       loop[2].dpc1  |     0.067 |
+|       loop[2].dpc2  |     0.006 |
+|       loop[30].dpc1 |     0.022 |
+|       loop[30].dpc2 |     0.030 |
+|       loop[31].dpc1 |     0.013 |
+|       loop[31].dpc2 |     0.016 |
+|       loop[3].dpc1  |     0.058 |
+|       loop[3].dpc2  |     0.021 |
+|       loop[3].dpr0  |     0.107 |
+|       loop[4].dpc1  |     0.033 |
+|       loop[4].dpc2  |     0.024 |
+|       loop[5].dpc1  |     0.026 |
+|       loop[5].dpc2  |     0.023 |
+|       loop[6].dpc1  |     0.021 |
+|       loop[6].dpc2  |     0.029 |
+|       loop[7].dpc1  |     0.032 |
+|       loop[7].dpc2  |     0.033 |
+|       loop[8].dpc1  |     0.049 |
+|       loop[8].dpc2  |     0.026 |
+|       loop[9].dpc1  |     0.038 |
+|       loop[9].dpc2  |     0.027 |
+|     pc              |     0.182 |
+|       loop[0].pc    |     0.014 |
+|       loop[10].pc   |     0.015 |
+|       loop[11].pc   |     0.012 |
+|       loop[1].pc    |     0.014 |
+|       loop[2].pc    |     0.015 |
+|       loop[3].pc    |     0.017 |
+|       loop[4].pc    |     0.013 |
+|       loop[5].pc    |     0.018 |
+|       loop[6].pc    |     0.014 |
+|       loop[7].pc    |     0.018 |
+|       loop[8].pc    |     0.015 |
+|       loop[9].pc    |     0.016 |
+|     xm              |     0.772 |
+|       loop[0].dpc1  |     0.023 |
+|       loop[0].dpc2  |     0.005 |
+|       loop[0].dpr0  |     0.006 |
+|       loop[10].dpc1 |     0.022 |
+|       loop[10].dpc2 |     0.006 |
+|       loop[11].dpc1 |     0.021 |
+|       loop[11].dpc2 |     0.005 |
+|       loop[12].dpc1 |     0.015 |
+|       loop[12].dpc2 |     0.004 |
+|       loop[13].dpc1 |     0.010 |
+|       loop[13].dpc2 |     0.006 |
+|       loop[13].dpr0 |     0.066 |
+|       loop[14].dpc1 |     0.008 |
+|       loop[14].dpc2 |     0.003 |
+|       loop[15].dpc1 |     0.013 |
+|       loop[15].dpc2 |     0.006 |
+|       loop[16].dpc1 |     0.010 |
+|       loop[16].dpc2 |     0.006 |
+|       loop[17].dpc1 |     0.029 |
+|       loop[17].dpc2 |     0.008 |
+|       loop[18].dpc1 |     0.012 |
+|       loop[18].dpc2 |     0.004 |
+|       loop[19].dpc1 |     0.013 |
+|       loop[19].dpc2 |     0.005 |
+|       loop[1].dpc1  |     0.017 |
+|       loop[1].dpc2  |     0.003 |
+|       loop[1].dpr0  |     0.028 |
+|       loop[20].dpc1 |     0.021 |
+|       loop[20].dpc2 |     0.003 |
+|       loop[21].dpc1 |     0.010 |
+|       loop[21].dpc2 |     0.006 |
+|       loop[22].dpc1 |     0.028 |
+|       loop[22].dpc2 |     0.003 |
+|       loop[23].dpc1 |     0.011 |
+|       loop[23].dpc2 |     0.004 |
+|       loop[23].dpr0 |     0.012 |
+|       loop[24].dpc1 |     0.008 |
+|       loop[24].dpc2 |     0.003 |
+|       loop[25].dpc1 |     0.010 |
+|       loop[25].dpc2 |     0.004 |
+|       loop[26].dpc1 |     0.024 |
+|       loop[26].dpc2 |     0.007 |
+|       loop[27].dpc1 |     0.008 |
+|       loop[27].dpc2 |     0.006 |
+|       loop[27].dpr0 |     0.008 |
+|       loop[28].dpc1 |     0.010 |
+|       loop[28].dpc2 |     0.005 |
+|       loop[29].dpc1 |     0.010 |
+|       loop[29].dpc2 |     0.004 |
+|       loop[29].dpr0 |     0.004 |
+|       loop[2].dpc1  |     0.018 |
+|       loop[2].dpc2  |     0.003 |
+|       loop[30].dpc1 |     0.010 |
+|       loop[30].dpc2 |     0.005 |
+|       loop[31].dpc1 |     0.002 |
+|       loop[3].dpc1  |     0.017 |
+|       loop[3].dpc2  |     0.006 |
+|       loop[3].dpr0  |     0.004 |
+|       loop[4].dpc1  |     0.016 |
+|       loop[4].dpc2  |     0.004 |
+|       loop[5].dpc1  |     0.019 |
+|       loop[5].dpc2  |     0.006 |
+|       loop[6].dpc1  |     0.023 |
+|       loop[6].dpc2  |     0.006 |
+|       loop[7].dpc1  |     0.016 |
+|       loop[7].dpc2  |     0.004 |
+|       loop[8].dpc1  |     0.014 |
+|       loop[8].dpc2  |     0.005 |
+|       loop[9].dpc1  |     0.020 |
+|       loop[9].dpc2  |     0.006 |
+|   InstMem           |     0.162 |
+|   ProcMem           |     0.726 |
+|   RegisterFile      |     1.033 |
++---------------------+-----------+
+
+
