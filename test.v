@@ -31,7 +31,6 @@ module test (
 	inout ps2_data
     );
 
-    reg[31:0] miss;
     reg[31:0] score;
     reg ingame;
     integer counter1;
@@ -73,9 +72,10 @@ module test (
         if (ingame==1'b1) begin
 
             //button 1
-            if (o1==1'b1 && counter1 >= 50000000) begin
+            if (o1==1'b1 && counter1 >= 100000000) begin
                 counter1 <= 0;
                 o1 <= 1'b0;
+                score <= score-32'd1;
             end else if(o1==1'b0 && counter1 >= 250000000) begin
                 counter1 <= 0;
                 o1 <= 1'b1;
@@ -83,13 +83,14 @@ module test (
             if (in1 != in1m && in1==1'b0 && o1==1'b1) begin
                 o1=1'b0;
                 counter1=0;
-                score <= score + 3'd1;
+                score <= score + 32'd1;
             end
             
             //button 2
             if (o2==1'b1 && counter2 >= 50000000) begin
                 counter2 <= 0;
                 o2 <= 1'b0;
+                //score <= score-32'd1;
             end else if(o2==1'b0 && counter2 >= 350000000) begin
                 counter2 <= 0;
                 o2 <= 1'b1;
@@ -97,13 +98,14 @@ module test (
             if (in2 != in2m && in2==1'b0 && o2==1'b1) begin
                 o2=1'b0;
                 counter2=0;
-                score <= score + 3'd1;
+                score <= score + 32'd1;
             end
 
             //button 3
             if (o3==1'b1 && counter3 >= 50000000) begin
                 counter3 <= 0;
                 o3 <= 1'b0;
+                //score <= score-32'd1;
             end else if(o3==1'b0 && counter3 >= 400000000) begin
                 counter3 <= 0;
                 o3 <= 1'b1;
@@ -111,13 +113,14 @@ module test (
             if (in3 != in3m && in3==1'b0 && o3==1'b1) begin
                 o3=1'b0;
                 counter3=0;
-                score <= score + 3'd1;
+                score <= score + 32'd1;
             end
 
             //button 4
             if (o4==1'b1 && counter4 >= 50000000) begin
                 counter4 <= 0;
                 o4 <= 1'b0;
+                //score <= score-32'd1;
             end else if(o4==1'b0 && counter4 >= 350000000) begin
                 counter4 <= 0;
                 o4 <= 1'b1;
@@ -125,19 +128,9 @@ module test (
             if (in4 != in4m && in4==1'b0 && o4==1'b1) begin
                 o4=1'b0;
                 counter4=0;
-                score <= score + 3'd1;
+                score <= score + 32'd1;
             end
 
-            //end game
-            if(miss >= 10) begin
-                ingame <= 1'b0;
-                score <= 32'b0;
-                o1 = 1'b1;
-                o2 = 1'b1;
-                o3 = 1'b1;
-                o4 = 1'b1;
-                o5 = 1'b1;
-            end
 
             //increment counters
             counter1 = counter1 + 1;
