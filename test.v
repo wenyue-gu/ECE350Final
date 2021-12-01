@@ -57,7 +57,7 @@ module test (
         o3 = 1'b1;
         o4 = 1'b1;
         o5 = 1'b1;
-        ingame = 1'b0;
+        ingame = 1'b1;
         score = 32'd0;
         led0 = 1'b0;
         led1 = 1'b0;
@@ -176,9 +176,10 @@ module test (
                 led5 <= 1'b1;
             else
                 led5 <= 1'b0;
-        end else begin
-            //button 5 (start game)
-            if (in5==1'b0) begin
+        end 
+        
+        //button 5 (start game)
+        else if (in5==1'b0) begin
                 ingame <= 1'b1;
                 o1 = 1'b0;
                 o2 = 1'b0;
@@ -186,7 +187,6 @@ module test (
                 o4 = 1'b0;
                 o5 = 1'b0;
             end
-        end
     end
 
     VGAController VGA(score,clk,reset, hSync, vSync,VGA_R,VGA_G, VGA_B,ps2_clk,ps2_data);

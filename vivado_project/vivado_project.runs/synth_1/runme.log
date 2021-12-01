@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+    with args -log test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test.tcl
 
 
 
@@ -9,172 +9,239 @@
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source main.tcl -notrace
-Command: synth_design -top main -part xc7a100tcsg324-1
+source test.tcl -notrace
+Command: synth_design -top test -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24704
-WARNING: [Synth 8-6901] identifier 'bypass_B_mux' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:47]
-WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'is_sw_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'is_r_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_addi_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_addi_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'is_r_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_addi_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_addi_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'is_r_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_addi_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_j2_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:79]
-WARNING: [Synth 8-6901] identifier 'is_r_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_addi_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_j2_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'is_lw_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'is_r_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'is_i_dx_no_lwsw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'is_sw_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'is_r_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'is_j2_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:84]
-WARNING: [Synth 8-6901] identifier 'is_addi_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:87]
-WARNING: [Synth 8-6901] identifier 'is_blt_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:87]
-WARNING: [Synth 8-6901] identifier 'is_bne_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:87]
-WARNING: [Synth 8-6901] identifier 'is_addi_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:88]
-WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:88]
-WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:88]
-WARNING: [Synth 8-6901] identifier 'is_addi_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:89]
-WARNING: [Synth 8-6901] identifier 'is_blt_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:89]
-WARNING: [Synth 8-6901] identifier 'is_bne_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:89]
-WARNING: [Synth 8-6901] identifier 'is_addi_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:90]
-WARNING: [Synth 8-6901] identifier 'is_blt_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:90]
-WARNING: [Synth 8-6901] identifier 'is_bne_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:90]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:91]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:92]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:94]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:94]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:96]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:96]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:97]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:97]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:99]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:100]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:101]
-WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:102]
-WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:104]
-WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:105]
-WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:106]
-INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7075] Helper process launched with PID 6220
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1137.980 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1134.012 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/cadyz/Documents/350Project/main.v:1]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cadyz/Documents/350Project/main.v:76]
-INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'pc_reg' [C:/Users/cadyz/Documents/350Project/processor/utils/pc_reg.v:1]
-INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/dffe_ref.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (1#1) [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/dffe_ref.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (2#1) [C:/Users/cadyz/Documents/350Project/processor/utils/pc_reg.v:1]
-INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/alu.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/alu.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (3#1) [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/alu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'fd_latch' [C:/Users/cadyz/Documents/350Project/processor/latches/fd_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'fd_latch' (4#1) [C:/Users/cadyz/Documents/350Project/processor/latches/fd_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'dx_latch' [C:/Users/cadyz/Documents/350Project/processor/latches/dx_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'dx_latch' (5#1) [C:/Users/cadyz/Documents/350Project/processor/latches/dx_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/cadyz/Documents/350Project/processor/utils/mux_4.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/cadyz/Documents/350Project/processor/utils/mux_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_2' (6#1) [C:/Users/cadyz/Documents/350Project/processor/utils/mux_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_4' (7#1) [C:/Users/cadyz/Documents/350Project/processor/utils/mux_4.v:1]
-INFO: [Synth 8-6157] synthesizing module 'xm_latch' [C:/Users/cadyz/Documents/350Project/processor/latches/xm_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'xm_latch' (8#1) [C:/Users/cadyz/Documents/350Project/processor/latches/xm_latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mw_latch' [C:/Users/cadyz/Documents/350Project/processor/latches/mw_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mw_latch' (9#1) [C:/Users/cadyz/Documents/350Project/processor/latches/mw_latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'processor' (10#1) [C:/Users/cadyz/Documents/350Project/processor/processor_main/processor.v:20]
-WARNING: [Synth 8-7071] port 'test_var' of module 'processor' is unconnected for instance 'CPU' [C:/Users/cadyz/Documents/350Project/main.v:29]
-WARNING: [Synth 8-7023] instance 'CPU' of module 'processor' has 16 connections declared, but only 15 given [C:/Users/cadyz/Documents/350Project/main.v:29]
-INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/cadyz/Documents/350Project/processor/processor_main/ROM.v:2]
-	Parameter MEMFILE bound to: 64'b0110110101100001011010010110111000101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'main.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/cadyz/Documents/350Project/processor/processor_main/ROM.v:11]
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'ROM' (11#1) [C:/Users/cadyz/Documents/350Project/processor/processor_main/ROM.v:2]
-INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/regfile.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'regfile' (12#1) [C:/Users/cadyz/Documents/350Project/processor/processor_main/Provided Behavioral Components/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/cadyz/Documents/350Project/processor/processor_main/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (13#1) [C:/Users/cadyz/Documents/350Project/processor/processor_main/RAM.v:2]
-WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/main.v:100]
-WARNING: [Synth 8-6090] variable 'clk_counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/main.v:101]
-WARNING: [Synth 8-6090] variable 'clk_counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/main.v:105]
-INFO: [Synth 8-6155] done synthesizing module 'main' (14#1) [C:/Users/cadyz/Documents/350Project/main.v:1]
+INFO: [Synth 8-6157] synthesizing module 'test' [C:/Users/cadyz/Documents/350Project/test.v:1]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cadyz/Documents/350Project/test.v:51]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cadyz/Documents/350Project/test.v:52]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cadyz/Documents/350Project/test.v:53]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cadyz/Documents/350Project/test.v:54]
+WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:84]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:85]
+WARNING: [Synth 8-6090] variable 'o2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:98]
+WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:99]
+WARNING: [Synth 8-6090] variable 'o3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:112]
+WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:113]
+WARNING: [Synth 8-6090] variable 'o4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:126]
+WARNING: [Synth 8-6090] variable 'counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:127]
+WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:135]
+WARNING: [Synth 8-6090] variable 'o2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:136]
+WARNING: [Synth 8-6090] variable 'o3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:137]
+WARNING: [Synth 8-6090] variable 'o4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:138]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:143]
+WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:145]
+WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:147]
+WARNING: [Synth 8-6090] variable 'counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/cadyz/Documents/350Project/test.v:149]
+INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/cadyz/Documents/350Project/VGAController.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/cadyz/Documents/350Project/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/cadyz/Documents/350Project/VGATimingGenerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RAM2' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011000000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image0.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData0' [C:/Users/cadyz/Documents/350Project/VGAController.v:80]
+WARNING: [Synth 8-7023] instance 'ImageData0' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:80]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized0' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011000000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors0.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized0' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette0' [C:/Users/cadyz/Documents/350Project/VGAController.v:94]
+WARNING: [Synth 8-7023] instance 'ColorPalette0' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:94]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized1' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011000100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image1.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized1' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData1' [C:/Users/cadyz/Documents/350Project/VGAController.v:108]
+WARNING: [Synth 8-7023] instance 'ImageData1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:108]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized2' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011000100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors1.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized2' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette1' [C:/Users/cadyz/Documents/350Project/VGAController.v:122]
+WARNING: [Synth 8-7023] instance 'ColorPalette1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:122]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized3' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011001000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image2.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized3' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData2' [C:/Users/cadyz/Documents/350Project/VGAController.v:137]
+WARNING: [Synth 8-7023] instance 'ImageData2' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:137]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized4' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011001000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors2.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized4' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette2' [C:/Users/cadyz/Documents/350Project/VGAController.v:151]
+WARNING: [Synth 8-7023] instance 'ColorPalette2' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:151]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized5' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image3.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized5' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData3' [C:/Users/cadyz/Documents/350Project/VGAController.v:167]
+WARNING: [Synth 8-7023] instance 'ImageData3' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:167]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized6' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors3.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized6' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette3' [C:/Users/cadyz/Documents/350Project/VGAController.v:181]
+WARNING: [Synth 8-7023] instance 'ColorPalette3' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:181]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized7' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011010000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image4.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized7' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData4' [C:/Users/cadyz/Documents/350Project/VGAController.v:195]
+WARNING: [Synth 8-7023] instance 'ImageData4' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:195]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized8' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011010000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors4.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized8' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette4' [C:/Users/cadyz/Documents/350Project/VGAController.v:209]
+WARNING: [Synth 8-7023] instance 'ColorPalette4' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:209]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized9' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image5.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized9' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData5' [C:/Users/cadyz/Documents/350Project/VGAController.v:224]
+WARNING: [Synth 8-7023] instance 'ImageData5' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:224]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized10' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors5.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized10' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette5' [C:/Users/cadyz/Documents/350Project/VGAController.v:238]
+WARNING: [Synth 8-7023] instance 'ColorPalette5' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:238]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized11' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011011000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image6.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized11' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData6' [C:/Users/cadyz/Documents/350Project/VGAController.v:253]
+WARNING: [Synth 8-7023] instance 'ImageData6' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:253]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized12' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011011000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors6.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized12' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette6' [C:/Users/cadyz/Documents/350Project/VGAController.v:267]
+WARNING: [Synth 8-7023] instance 'ColorPalette6' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:267]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized13' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011011100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image7.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized13' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData7' [C:/Users/cadyz/Documents/350Project/VGAController.v:283]
+WARNING: [Synth 8-7023] instance 'ImageData7' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:283]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized14' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011011100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors7.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized14' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette7' [C:/Users/cadyz/Documents/350Project/VGAController.v:297]
+WARNING: [Synth 8-7023] instance 'ColorPalette7' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:297]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized15' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011100000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image8.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized15' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData8' [C:/Users/cadyz/Documents/350Project/VGAController.v:311]
+WARNING: [Synth 8-7023] instance 'ImageData8' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:311]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized16' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011100000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors8.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized16' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette8' [C:/Users/cadyz/Documents/350Project/VGAController.v:325]
+WARNING: [Synth 8-7023] instance 'ColorPalette8' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:325]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized17' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101101001011011010110000101100111011001010011100100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image9.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized17' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData9' [C:/Users/cadyz/Documents/350Project/VGAController.v:340]
+WARNING: [Synth 8-7023] instance 'ImageData9' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:340]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized18' [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110001101101111011011000110111101110010011100110011100100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors9.mem' is read successfully [C:/Users/cadyz/Documents/350Project/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized18' (2#1) [C:/Users/cadyz/Documents/350Project/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette9' [C:/Users/cadyz/Documents/350Project/VGAController.v:354]
+WARNING: [Synth 8-7023] instance 'ColorPalette9' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/cadyz/Documents/350Project/VGAController.v:354]
+INFO: [Synth 8-6155] done synthesizing module 'VGAController' (3#1) [C:/Users/cadyz/Documents/350Project/VGAController.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'test' (4#1) [C:/Users/cadyz/Documents/350Project/test.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1137.980 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1137.980 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1137.980 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.242 . Memory (MB): peak = 1137.980 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2375.555 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -183,104 +250,56 @@ Parsing XDC File [C:/Users/cadyz/Documents/350Project/constraints.xdc]
 WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:1]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:1]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o2'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o2'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o3'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o3'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o4'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o4'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o5'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o5'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in2'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in2'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in3'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in3'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in4'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in4'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/cadyz/Documents/350Project/constraints.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cadyz/Documents/350Project/constraints.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/cadyz/Documents/350Project/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/cadyz/Documents/350Project/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/cadyz/Documents/350Project/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1254.852 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1254.852 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2375.555 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 2375.555 ; gain = 1241.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   33 Bit       Adders := 3     
-	   3 Input   33 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 34    
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 424   
+	               12 Bit    Registers := 11    
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 10    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
 +---RAMs : 
-	             128K Bit	(4096 X 32 bit)          RAMs := 1     
+	            2700K Bit	(307200 X 9 bit)          RAMs := 10    
+	               3K Bit	(256 X 12 bit)          RAMs := 10    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 24    
-	   2 Input    5 Bit        Muxes := 7     
-	   2 Input    2 Bit        Muxes := 2     
-	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 46    
-	   7 Input    1 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -296,26 +315,324 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+DSP Report: Generating DSP imgAddress, operation Mode is: (C or 0)+(A:0x280)*B.
+DSP Report: operator imgAddress is absorbed into DSP imgAddress.
+DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
+DSP Report: operator imgAddress is absorbed into DSP imgAddress.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 2575.930 ; gain = 1441.918
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-7048] Resources of type BRAM have been overutilized even after performing resource management. Used = 1600, Available = 270. 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name            | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM2:                  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized1:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized3:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized5:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized7:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized9:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized11: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized13: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized15: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized17: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
++-----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives      | 
++------------+-------------------------------+-----------+----------------------+-----------------+
+|VGA         | ColorPalette0/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette1/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette2/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette3/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette4/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette5/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette6/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette7/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette8/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette9/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
++------------+-------------------------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below)
++--------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping          | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VGAController | (C or 0)+(A:0x280)*B | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++--------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Timing Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name            | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM2:                  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized1:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized3:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized5:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized7:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized9:  | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized11: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized13: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized15: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized17: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
++-----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+-------------------------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives      | 
++------------+-------------------------------+-----------+----------------------+-----------------+
+|VGA         | ColorPalette0/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette1/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette2/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette3/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette4/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette5/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette6/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette7/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette8/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
+|VGA         | ColorPalette9/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12  | 
++------------+-------------------------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_2' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_2' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_2' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_2' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_2' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_2' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_2' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_2' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_2' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_2' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_2'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_3' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_3' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_3' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_3' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_3' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_3' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_3' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_3' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_3' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_3' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_3'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_4' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_4' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_4' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_4' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_4' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_4' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_4' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_4' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_4' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_4' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_4'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_5' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_5' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_5' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_5' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_5' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_5' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_5' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_5' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_5' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_5' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_5'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_6' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_6' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_6' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_6' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_6' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_6' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_6' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_6' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_6' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_6' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_6'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_0_7' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_0_7' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_0_7' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_0_7' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_0_7' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_0_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_1_7' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_1_7' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_1_7' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_1_7' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_1_7' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_1_7'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_2_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_2_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_2_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_2_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_2_0' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_3_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_3_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_3_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_3_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_3_0' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_0'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_2_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_2_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_2_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_2_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_2_1' (RAMB36E1) to 'VGA/ImageData0/MemoryArray_reg_2_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData1/MemoryArray_reg_3_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData3/MemoryArray_reg_3_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData5/MemoryArray_reg_3_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData7/MemoryArray_reg_3_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_1'
+INFO: [Synth 8-223] decloning instance 'VGA/ImageData9/MemoryArray_reg_3_1' (RAMB36E1_1) to 'VGA/ImageData0/MemoryArray_reg_3_1'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData2/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData3/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData4/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData5/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData6/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData7/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_9_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData8/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Technology Mapping : Time (s): cpu = 00:02:29 ; elapsed = 00:02:35 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -333,37 +650,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished IO Insertion : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -376,43 +693,48 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    36|
-|3     |LUT1   |    23|
-|4     |LUT2   |    63|
-|5     |LUT3   |     5|
-|6     |LUT4   |    41|
-|7     |LUT5   |     1|
-|8     |FDCE   |     1|
-|9     |FDRE   |    41|
-|10    |IBUF   |     3|
-|11    |OBUF   |     7|
-+------+-------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |   159|
+|3     |DSP48E1   |     1|
+|4     |LUT1      |     9|
+|5     |LUT2      |   271|
+|6     |LUT3      |   179|
+|7     |LUT4      |   310|
+|8     |LUT5      |   110|
+|9     |LUT6      |   229|
+|10    |RAM256X1S |   120|
+|11    |RAMB36E1  |   220|
+|165   |FDCE      |    20|
+|166   |FDRE      |   311|
+|167   |IBUF      |     6|
+|168   |OBUF      |    26|
++------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 1254.852 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1254.852 ; gain = 116.871
+Synthesis finished with 0 errors, 1 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:56 ; elapsed = 00:02:41 . Memory (MB): peak = 2575.930 ; gain = 1441.918
+Synthesis Optimization Complete : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1254.852 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2575.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 500 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1254.852 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2575.930 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 120 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 120 instances
 
-Synth Design complete, checksum: bad3f89a
+Synth Design complete, checksum: 66a4a456
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 123 Warnings, 18 Critical Warnings and 0 Errors encountered.
+283 Infos, 61 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1254.852 ; gain = 116.871
+synth_design: Time (s): cpu = 00:02:43 ; elapsed = 00:02:51 . Memory (MB): peak = 2575.930 ; gain = 1441.918
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/synth_1/main.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 30 11:31:07 2021...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cadyz/Documents/350Project/vivado_project/vivado_project.runs/synth_1/test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file test_utilization_synth.rpt -pb test_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 30 22:25:03 2021...

@@ -15,7 +15,7 @@ module VGAController(
 
 	
 	// Lab Memory Files Location
-	localparam FILES_PATH = "Path/To/File/Directory";
+	localparam FILES_PATH = "./images/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock

@@ -108,18 +108,20 @@ module main
 		end
 
 		// TODO:
-		in1 = ~in1;
-		$display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, in1m: %d, reg30: %d, rData_actual: %d, rwe_actual: %d", o1, in1, score_stored, score_to_add, write_status, in1m, reg30, rData_actual, rwe_actual);
-		if (counter ==50)  
+		if (clk_counter1 % 13 == 0) 
+            in1 <= ~in1;
+
+		$display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
+		if (counter ==100)  
 			$finish;
 
 
 		// led goes off after 1s if no hits 
-       if (o1==1'b1 && clk_counter1 >= 200000000) begin
+       if (o1==1'b1 && clk_counter1 >= 10) begin
             clk_counter1 <= 0;
             o1 <= 1'b0;
 		// led goes on after 0.5s	
-        end else if(o1==1'b0 && clk_counter1 >= 250000000) begin
+        end else if(o1==1'b0 && clk_counter1 >= 15) begin
             clk_counter1 <= 0;
             o1 <= 1'b1;
         end
@@ -159,12 +161,10 @@ module main
         else
             led5 <= 1'b0;
 
-                
         if (was_writing) begin
 			score_to_add = 0;
             was_writing = 0;
         end
-
     end
 
 endmodule
