@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Dec  1 16:33:20 2021
-# Process ID: 14736
+# Start of session at: Wed Dec  1 17:58:57 2021
+# Process ID: 12820
 # Current directory: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1
 # Command line: vivado.exe -log test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test.tcl
 # Log file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/test.vds
@@ -17,27 +17,27 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 984
+INFO: [Synth 8-7075] Helper process launched with PID 11128
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1130.426 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1130.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'test' [C:/Users/zz160/Desktop/ECE350Final/test.v:1]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:50]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:51]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:52]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:53]
-WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:85]
-WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:86]
-WARNING: [Synth 8-6090] variable 'o2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:101]
-WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:102]
-WARNING: [Synth 8-6090] variable 'o3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:117]
-WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:118]
-WARNING: [Synth 8-6090] variable 'o4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:133]
-WARNING: [Synth 8-6090] variable 'counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:134]
-WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:140]
-WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:142]
-WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:144]
-WARNING: [Synth 8-6090] variable 'counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:146]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:56]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:57]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:58]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:59]
+WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:95]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:96]
+WARNING: [Synth 8-6090] variable 'o2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:111]
+WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:112]
+WARNING: [Synth 8-6090] variable 'o3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:127]
+WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:128]
+WARNING: [Synth 8-6090] variable 'o4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:143]
+WARNING: [Synth 8-6090] variable 'counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:144]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:150]
+WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:152]
+WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:154]
+WARNING: [Synth 8-6090] variable 'counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:156]
 INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
 INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v:2]
 	Parameter HEIGHT bound to: 480 - type: integer 
@@ -50,8 +50,8 @@ INFO: [Synth 8-6157] synthesizing module 'RAM2' [C:/Users/zz160/Desktop/ECE350Fi
 	Parameter MEMFILE bound to: 160'b0010111000101111011010010110110101100001011001110110010101110011001011110110100101101101011000010110011101100101001100010011000000101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file './images/image10.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM2' (2#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData0' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:81]
-WARNING: [Synth 8-7023] instance 'ImageData0' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:81]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData0' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:74]
+WARNING: [Synth 8-7023] instance 'ImageData0' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:74]
 INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized0' [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
@@ -59,23 +59,23 @@ INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized0' [C:/Users/zz160/
 	Parameter MEMFILE bound to: 168'b001011100010111101101001011011010110000101100111011001010111001100101111011000110110111101101100011011110111001001110011001100010011000000101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file './images/colors10.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized0' (2#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette0' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:95]
-WARNING: [Synth 8-7023] instance 'ColorPalette0' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:95]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette0' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:88]
+WARNING: [Synth 8-7023] instance 'ColorPalette0' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:88]
 INFO: [Synth 8-6155] done synthesizing module 'VGAController' (3#1) [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'test' (4#1) [C:/Users/zz160/Desktop/ECE350Final/test.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1130.426 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1130.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1130.426 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1130.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1130.426 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1130.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1130.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1130.043 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -198,37 +198,41 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-507] No nets matched 'score_reg[26]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:155]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:155]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:156]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:156]
+WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:159]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1175.191 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1174.098 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1175.191 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1174.098 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1175.191 ; gain = 44.766
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1174.098 ; gain = 44.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1175.191 ; gain = 44.766
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1174.098 ; gain = 44.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for in1m. (constraint file  C:/Users/zz160/Desktop/ECE350Final/constraints.xdc, line 157).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1175.191 ; gain = 44.766
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1174.098 ; gain = 44.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1175.191 ; gain = 44.766
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1174.098 ; gain = 44.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -236,12 +240,12 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   10 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 16    
 +---RAMs : 
 	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
@@ -274,7 +278,7 @@ DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator imgAddress is absorbed into DSP imgAddress.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1175.191 ; gain = 44.766
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1174.098 ; gain = 44.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -305,13 +309,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1203.980 ; gain = 73.555
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.488 ; gain = 77.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1204.945 ; gain = 74.520
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1208.305 ; gain = 78.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -373,7 +377,7 @@ INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_
 INFO: [Synth 8-7052] The timing for the instance VGA/ImageData0/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance VGA/ColorPalette0/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1219.254 ; gain = 88.828
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1223.277 ; gain = 93.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -391,37 +395,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.723 ; gain = 96.297
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.672 ; gain = 98.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.723 ; gain = 96.297
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.672 ; gain = 98.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.723 ; gain = 96.297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.672 ; gain = 98.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.723 ; gain = 96.297
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.672 ; gain = 98.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.746 ; gain = 96.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.719 ; gain = 98.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.746 ; gain = 96.320
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.719 ; gain = 98.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -437,15 +441,15 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     1|
+|1     |BUFG     |     2|
 |2     |CARRY4   |   114|
 |3     |DSP48E1  |     1|
 |4     |LUT1     |    38|
-|5     |LUT2     |   286|
-|6     |LUT3     |    97|
-|7     |LUT4     |   268|
+|5     |LUT2     |   288|
+|6     |LUT3     |    98|
+|7     |LUT4     |   272|
 |8     |LUT5     |    35|
-|9     |LUT6     |    55|
+|9     |LUT6     |    60|
 |10    |RAMB18E1 |     1|
 |11    |RAMB36E1 |    80|
 |37    |FDCE     |    20|
@@ -455,27 +459,29 @@ Report Cell Usage:
 |41    |OBUF     |    26|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.746 ; gain = 96.320
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1228.719 ; gain = 98.676
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1226.746 ; gain = 51.555
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1226.746 ; gain = 96.320
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 1228.719 ; gain = 54.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1228.719 ; gain = 98.676
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1226.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1240.789 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 196 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1226.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1245.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: f6ce596f
+Synth Design complete, checksum: 889b4520
 INFO: [Common 17-83] Releasing license: Synthesis
-68 Infos, 60 Warnings, 40 Critical Warnings and 0 Errors encountered.
+68 Infos, 61 Warnings, 41 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1226.746 ; gain = 96.320
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1245.438 ; gain = 115.395
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/test.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file test_utilization_synth.rpt -pb test_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  1 16:34:12 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  1 17:59:48 2021...

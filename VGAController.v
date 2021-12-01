@@ -18,13 +18,6 @@ module VGAController(
 	// Lab Memory Files Location
 	localparam FILES_PATH = "./images/";
 
-	// Clock divider 100 MHz -> 25 MHz
-	wire clk25; // 25MHz clock
-
-	reg[1:0] pixCounter = 0;      // Pixel counter to divide the clock
-    assign clk25 = pixCounter[1]; // Set the clock high whenever the second bit (2) is high
-
-
 	// VGA Timing Generation for a Standard VGA Screen
 	localparam  
 		VIDEO_WIDTH = 640,  // Standard VGA Width
@@ -38,7 +31,7 @@ module VGAController(
 		.HEIGHT(VIDEO_HEIGHT), // Use the standard VGA Values
 		.WIDTH(VIDEO_WIDTH))
 	Display( 
-		.clk25(clk25),  	   // 25MHz Pixel Clock
+		.clk25(clk),  	   // 25MHz Pixel Clock
 		.reset(reset),		   // Reset Signal
 		.screenEnd(screenEnd), // High for one cycle when between two frames
 		.active(active),	   // High when drawing pixels
@@ -371,7 +364,6 @@ module VGAController(
 
 
 	always @(posedge clk) begin
-		pixCounter <= pixCounter + 1; // Since the reg is only 3 bits, it will reset every 8 cycles
         // if(score % 5 == 32'd0) 
         //     colorOut = colorData0; 
         // if(score % 5 ==32'd1) 

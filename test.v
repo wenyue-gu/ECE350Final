@@ -42,6 +42,12 @@ module test (
     reg in3m;
     reg in4m;
 
+    // Clock divider 100 MHz -> 25 MHz
+	wire clk125; // 25MHz clock
+
+	reg[2:0] pixCounter = 0;      // Pixel counter to divide the clock
+    assign clk125 = pixCounter[1]; // Set the clock high whenever the second bit (2) is high
+
     initial begin
         counter1 = 0;
         counter2 = 0;
@@ -69,6 +75,10 @@ module test (
 
 // 100 000000 - 1s
     always @(posedge clk) begin
+        pixCounter <= pixCounter + 1; // Since the reg is only 3 bits, it will reset every 8 cycles
+
+    end
+    always @(posedge clk125) begin
         if (ingame==1'b1) begin
 
             //button 1
@@ -135,7 +145,7 @@ module test (
                 score <= score + 32'd1;
             end
 
-
+            #1
             //increment counters
             counter1 = counter1 + 1;
             in1m = in1;
@@ -201,6 +211,6 @@ module test (
         end
     end
 
-    VGAController VGA(ingame, score,clk,reset, hSync, vSync,VGA_R,VGA_G, VGA_B,ps2_clk,ps2_data);
+    VGAController VGA(ingame, score,clk125,reset, hSync, vSync,VGA_R,VGA_G, VGA_B,ps2_clk,ps2_data);
 
 endmodule
