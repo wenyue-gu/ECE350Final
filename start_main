@@ -6,5 +6,5 @@ find . -name "*.v" > FileList.txt
 ./asm -o "$FILE_NAME.mem" "$FILE_NAME.s"
 # cat processor/Test\ Files/Memory\ Files/"$FILE_NAME.memraw" | head -n$NUM_CYCLES > processor/Test\ Files/Memory\ Files/"$FILE_NAME.mem"
 # rm -f processor/Test\ Files/Memory\ Files/"$FILE_NAME.memraw"
-iverilog -o MAIN -c FileList.txt -s main -P main.FILE=\"$FILE_NAME\"
+iverilog -o MAIN -c FileList.txt -s main
 vvp MAIN

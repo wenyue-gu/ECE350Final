@@ -1,13 +1,13 @@
 module regfile(
 	clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg,
 	ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA,
-	data_readRegB, data_rstatus);
+	data_readRegB, data_score, data_rstatus);
 	
 	input clock, ctrl_writeEnable, ctrl_reset;
 	input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
 	input [31:0] data_writeReg;
 	output [31:0] data_readRegA, data_readRegB;
-	output [31:0] data_rstatus;
+	output [31:0] data_score, data_rstatus;
 
 	reg[31:0] registers[31:0];
 
@@ -34,6 +34,7 @@ module regfile(
 	
 	assign data_readRegA = registers[ctrl_readRegA];
 	assign data_readRegB = registers[ctrl_readRegB];
+	assign data_score = registers[1];
 	assign data_rstatus = registers[30];
 	
 endmodule

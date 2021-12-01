@@ -11,8 +11,6 @@
 ./processor/Provided Behavioral Components/regfile.v
 ./processor/RAM.v
 ./processor/ROM.v
-./processor/Wrapper.v
-./processor/Wrapper_tb.v
 ./utils/dffe_ref_neg.v
 ./utils/mux_2.v
 ./utils/mux_4.v

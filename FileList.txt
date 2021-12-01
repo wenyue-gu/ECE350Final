@@ -1,5 +1,4 @@
 ./main.v
-./main_tb.v
 ./processor/latches/dx_latch.v
 ./processor/latches/fd_latch.v
 ./processor/latches/mw_latch.v
