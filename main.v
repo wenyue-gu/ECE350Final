@@ -43,7 +43,7 @@ module main
     
 
 
-	assign reset = in5;
+	assign reset = 1'd0;
     assign rwe_actual = write_status ? 1'd1 : rwe_inst;
 	assign rd_actual = write_status ? 5'd30 : rd_inst;
 	assign rData_actual = write_status ? score_to_add : rData_inst;

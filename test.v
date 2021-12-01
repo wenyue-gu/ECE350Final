@@ -145,6 +145,11 @@ module test (
             in3m = in3;
             counter4 = counter4 + 1;
             in4m = in4;
+            
+            //end 
+            if(score>=32'd12) begin
+                ingame=1'b0;
+            end
 
 
             //use led to display score

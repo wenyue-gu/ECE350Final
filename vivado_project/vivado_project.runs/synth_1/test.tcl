@@ -108,8 +108,11 @@ read_mem {
   C:/Users/zz160/Desktop/ECE350Final/images/colors3.mem
   C:/Users/zz160/Desktop/ECE350Final/images/image6.mem
   C:/Users/zz160/Desktop/ECE350Final/images/colors7.mem
+  C:/Users/zz160/Desktop/ECE350Final/images/colors10.mem
+  C:/Users/zz160/Desktop/ECE350Final/images/image10.mem
 }
 read_verilog -library xil_defaultlib {
+  C:/Users/zz160/Desktop/ECE350Final/RAM2.v
   C:/Users/zz160/Desktop/ECE350Final/VGAController.v
   C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v
   C:/Users/zz160/Desktop/ECE350Final/test.v
