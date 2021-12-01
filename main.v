@@ -31,6 +31,8 @@ module main
 	wire[31:0] instAddr, instData, 
 		rData_inst, rData_actual, regA, regB,
 		memAddr, memDataIn, memDataOut, reg30;
+    wire [31:0] score_stored;
+    
 
 
 	assign reset = in5;
@@ -69,7 +71,6 @@ module main
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
 		.data_writeReg(rData_actual), .data_readRegA(regA), .data_readRegB(regB), .data_score(score_stored), .data_rstatus(reg30));
 
-    wire [31:0] score_stored;
 						
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(clk), 
