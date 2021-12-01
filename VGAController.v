@@ -392,101 +392,96 @@ module VGAController(
         //     colorOut = colorData8; 
         // if(score % 10 ==9) 
         //     colorOut = colorData9; 
-        if (ingame==1'b1) begin
-            if (x < 10'd160 && x> 10'd0 && y < 9'd160 && y > 9'd0) begin
-                if(score > 32'd0) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd320 && x > 10'd159 && y < 9'd160 && y > 9'd0) begin
-                if(score > 32'd1) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd480 && x> 10'd319 && y < 9'd160 && y > 9'd0) begin
-                if(score > 32'd2)begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd640 && x > 10'd479 && y < 9'd160 && y > 9'd0) begin
-                if(score > 32'd3) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            
-            if (x < 10'd160 && x > 10'd0 && y < 9'd320 && y > 9'd159) begin
-                if(score > 32'd4) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd320 && x > 10'd159 && y < 9'd320 && y > 9'd159) begin
-                if(score > 32'd5) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd480 && x > 10'd319 && y < 9'd320 && y > 9'd159) begin
-                if(score > 32'd6) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd640 && x > 10'd479 && y < 9'd320 && y > 9'd159) begin
-                if(score > 32'd7) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-
-            
-            if (x < 10'd160 && x > 10'd0 && y < 9'd480 && y > 9'd319) begin
-                if(score > 32'd8) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd320 && x > 10'd159 && y < 9'd480 && y > 9'd319) begin
-                if(score > 32'd9) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd480 && x > 10'd319 && y < 9'd480 && y > 9'd319) begin
-                if(score > 32'd10) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
-            end
-            if (x < 10'd640 && x > 10'd479 && y < 9'd480 && y > 9'd319) begin
-                if(score > 32'd11) begin
-                    colorOut=12'd0;
-                end else begin
-                    colorOut=12'b111111111111;
-                end
+        if (x < 10'd160 && x> 10'd0 && y < 9'd160 && y > 9'd0) begin
+            if(score > 32'd0) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
             end
         end
-        else begin
-            colorOut = colorData0;
+        if (x < 10'd320 && x > 10'd159 && y < 9'd160 && y > 9'd0) begin
+            if(score > 32'd1) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd480 && x> 10'd319 && y < 9'd160 && y > 9'd0) begin
+            if(score > 32'd2)begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd640 && x > 10'd479 && y < 9'd160 && y > 9'd0) begin
+            if(score > 32'd3) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        
+        if (x < 10'd160 && x > 10'd0 && y < 9'd320 && y > 9'd159) begin
+            if(score > 32'd4) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd320 && x > 10'd159 && y < 9'd320 && y > 9'd159) begin
+            if(score > 32'd5) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd480 && x > 10'd319 && y < 9'd320 && y > 9'd159) begin
+            if(score > 32'd6) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd640 && x > 10'd479 && y < 9'd320 && y > 9'd159) begin
+            if(score > 32'd7) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+
+        
+        if (x < 10'd160 && x > 10'd0 && y < 9'd480 && y > 9'd319) begin
+            if(score > 32'd8) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd320 && x > 10'd159 && y < 9'd480 && y > 9'd319) begin
+            if(score > 32'd9) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd480 && x > 10'd319 && y < 9'd480 && y > 9'd319) begin
+            if(score > 32'd10) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
+        end
+        if (x < 10'd640 && x > 10'd479 && y < 9'd480 && y > 9'd319) begin
+            if(score > 32'd11) begin
+                colorOut=12'd0;
+            end else begin
+                colorOut=12'b111111111111;
+            end
         end
     end
     
 
 	// Quickly assign the output colors to their channels using concatenation
-	assign {VGA_R, VGA_G, VGA_B} = colorOut;
+	assign {VGA_R, VGA_G, VGA_B} = ingame? colorOut:colorData0;
 endmodule

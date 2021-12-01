@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1638390606">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1638395819">
+  <File Type="OPT-HWDEF" Name="test.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="test_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="test.dcp"/>
   <File Type="ROUTE-PWR" Name="test_power_routed.rpt"/>
   <File Type="PA-TCL" Name="test.tcl"/>
   <File Type="BITSTR-MMI" Name="test.mmi"/>
@@ -10,7 +13,6 @@
   <File Type="OPT-TIMING" Name="test_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="test_opt.dcp"/>
   <File Type="OPT-DRC" Name="test_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="test.hwdef"/>
   <File Type="PWROPT-DCP" Name="test_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="test_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="test_timing_summary_pwropted.rpt"/>
@@ -48,7 +50,6 @@
   <File Type="ROUTE-TIMING-RPX" Name="test_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="test_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="test_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="test_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="test_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="test_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="test_postroute_physopt.dcp"/>
@@ -395,6 +396,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../images/image.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../images/colors.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="test"/>
@@ -409,6 +422,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

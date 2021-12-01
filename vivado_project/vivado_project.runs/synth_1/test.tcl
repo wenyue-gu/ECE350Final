@@ -110,6 +110,8 @@ read_mem {
   C:/Users/zz160/Desktop/ECE350Final/images/colors7.mem
   C:/Users/zz160/Desktop/ECE350Final/images/colors10.mem
   C:/Users/zz160/Desktop/ECE350Final/images/image10.mem
+  C:/Users/zz160/Desktop/ECE350Final/images/image.mem
+  C:/Users/zz160/Desktop/ECE350Final/images/colors.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/zz160/Desktop/ECE350Final/RAM2.v
