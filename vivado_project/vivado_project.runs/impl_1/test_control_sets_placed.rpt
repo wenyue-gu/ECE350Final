@@ -1,0 +1,95 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Wed Dec  1 15:30:52 2021
+| Host         : P2-07 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file test_control_sets_placed.rpt
+| Design       : test
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    70 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    17 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |           14 |
+| No           | No                    | Yes                    |              10 |            7 |
+| No           | Yes                   | No                     |               1 |            1 |
+| Yes          | No                    | No                     |               3 |            3 |
+| Yes          | No                    | Yes                    |              10 |            4 |
+| Yes          | Yes                   | No                     |             178 |           52 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------+-------------------+------------------+----------------+--------------+
+|  Clock Signal  |   Enable Signal  |  Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------+-------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                  | ingame11_out      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           | led05_out         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           | led14_out         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           | led41_out         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           | led23_out         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           | led50_out         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           | led32_out         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ingame           |                   |                3 |              3 |         1.00 |
+|  VGA/clk25     |                  | reset_IBUF        |                7 |             10 |         1.43 |
+|  VGA/clk25     | VGA/Display/vPos | reset_IBUF        |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | VGA/Display/E[0] | VGA/Display/SR[0] |                6 |             12 |         2.00 |
+|  clk_IBUF_BUFG |                  |                   |               14 |             16 |         1.14 |
+|  clk_IBUF_BUFG | ingame           | counter1          |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | ingame           | counter2          |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | ingame           | counter3          |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | ingame           | counter4          |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | score            | ingame11_out      |                8 |             32 |         4.00 |
++----------------+------------------+-------------------+------------------+----------------+--------------+
+
+

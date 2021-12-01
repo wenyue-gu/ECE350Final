@@ -182,15 +182,17 @@ module test (
         
         //button 5 (start game)
         else begin
-            if (in5==1'b0 || in1==1'b0 ) begin
+            if ( ( in1==1'b0 && in1!=in1m) ) begin
                 ingame <= 1'b1;
-                score <= 32'd0;
+                score <= 32'd3;
                 o1 = 1'b0;
                 o2 = 1'b0;
                 o3 = 1'b0;
                 o4 = 1'b0;
                 o5 = 1'b0;
             end
+            
+            in1m = in1;
         end
     end
 
