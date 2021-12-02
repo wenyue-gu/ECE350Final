@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -89,26 +87,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {
   C:/Users/zz160/Desktop/ECE350Final/main.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image8.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image3.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors2.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors8.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors1.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image4.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image7.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors9.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors5.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors0.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image5.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image0.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors6.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors4.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image9.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image2.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image1.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors3.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/image6.mem
-  C:/Users/zz160/Desktop/ECE350Final/images/colors7.mem
   C:/Users/zz160/Desktop/ECE350Final/images/colors10.mem
   C:/Users/zz160/Desktop/ECE350Final/images/image10.mem
   C:/Users/zz160/Desktop/ECE350Final/images/image.mem
@@ -118,6 +96,27 @@ read_verilog -library xil_defaultlib {
   C:/Users/zz160/Desktop/ECE350Final/RAM2.v
   C:/Users/zz160/Desktop/ECE350Final/VGAController.v
   C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/alu.v}
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/dffe_ref.v}
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/divider.v}
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/dx_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/fd_latch.v
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/multiplier.v}
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_2.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_4.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/mw_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/pc_reg.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/latches/xm_latch.v
+  C:/Users/zz160/Desktop/ECE350Final/test_tb.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Wrapper.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/utils/dffe_ref_neg.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/RAM.v
+  C:/Users/zz160/Desktop/ECE350Final/main.v
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/ROM.v
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/regfile.v}
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v
+  {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/multdiv.v}
+  C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Wrapper_tb.v
   C:/Users/zz160/Desktop/ECE350Final/test.v
 }
 OPTRACE "Adding files" END { }
