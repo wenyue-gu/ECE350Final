@@ -12,8 +12,14 @@ module AudioController(
 	assign audioEn = 1'b1;  // Enable Audio Output
 
 	// Initialize the frequency array. FREQs[0] = 261
-	reg[10:0] FREQs[0:15];
+	reg [10:0] FREQs[0:15];
+	reg hit2;
+	wire [31:0] hitthresh;
+	assign hitthresh=10000000;
+	reg [31:0] hitcounter=0;
+
 	initial begin
+		hit2 = 1'b0;
 		$readmemh("FREQs.mem", FREQs);
 	end
 	
@@ -25,22 +31,18 @@ module AudioController(
 
 	reg audioClk=0;
 	reg[31:0] counter=0;
-	wire hit2;
-	assign hit2=1'b0;
 
-	wire [31:0] hitthresh;
-	assign hitthresh=10000000;
-	reg[31:0] hitcounter=0;
+
 	always @(posedge clk) begin
-
-		hitcounter=hitcounter+1;
-		if(hitcounter==hitthresh)
+		hitcounter = hitcounter + 1;
+		if(hitcounter == hitthresh)
 			hit2=1'b0;
 
-		if(hit) begin
+		if (hit) begin
 			hit2=1'b1;
 			hitcounter=32'b0;
 		end
+
 		if(counter<thresh-1)
 			counter<=count+1;
 		else begin

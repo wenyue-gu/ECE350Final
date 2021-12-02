@@ -27,7 +27,7 @@ module main
     output       audioEn	// Audio Enable
 );
 
-    wire hit;
+    reg hit;
             
     (* mark_debug = "true" *) reg was_writing;
     (* mark_debug = "true" *) reg [31:0] score_to_add;
