@@ -29,7 +29,7 @@ module AudioController(
 	assign hit2=1'b0;
 
 	wire [31:0] hitthresh;
-	assign hitthresh=100000;
+	assign hitthresh=10000000;
 	reg[31:0] hitcounter=0;
 	always @(posedge clk) begin
 
