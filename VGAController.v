@@ -50,7 +50,7 @@ module VGAController(
 
 	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
 	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr0; 	 // Color address for the color palette
-	// wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr1; 	 // Color address for the color palette
+	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr1; 	 // Color address for the color palette
 	// wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr2; 	 // Color address for the color palette
 	// wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr3; 	 // Color address for the color palette
 	// wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr4; 	 // Color address for the color palette
@@ -92,32 +92,32 @@ module VGAController(
 		.wEn(1'b0)); 						       // We're always reading
 
 
-    // //1
+    //1
 
-	// RAM2  #(		
-	// 	.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
-	// 	.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-	// 	.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-	// 	.MEMFILE({FILES_PATH, "image1.mem"})) // Memory initialization
-	// ImageData1(
-	// 	.clk(clk), 						 // Falling edge of the 100 MHz clk
-	// 	.addr(imgAddress),					 // Image data address
-	// 	.dataOut(colorAddr1),				 // Color palette address
-	// 	.wEn(1'b0)); 						 // We're always reading
+	RAM2  #(		
+		.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
+		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
+		.MEMFILE({FILES_PATH, "image1.mem"})) // Memory initialization
+	ImageData1(
+		.clk(clk), 						 // Falling edge of the 100 MHz clk
+		.addr(imgAddress),					 // Image data address
+		.dataOut(colorAddr1),				 // Color palette address
+		.wEn(1'b0)); 						 // We're always reading
 
-	// // Color Palette to Map Color Address to 12-Bit Color
-	// wire[BITS_PER_COLOR-1:0] colorData1; // 12-bit color data at current pixel
+	// Color Palette to Map Color Address to 12-Bit Color
+	wire[BITS_PER_COLOR-1:0] colorData1; // 12-bit color data at current pixel
 
-	// RAM2  #(
-	// 	.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
-	// 	.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
-	// 	.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
-	// 	.MEMFILE({FILES_PATH, "colors1.mem"}))  // Memory initialization
-	// ColorPalette1(
-	// 	.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-	// 	.addr(colorAddr1),					       // Address from the ImageData RAM
-	// 	.dataOut(colorData1),				       // Color at current pixel
-	// 	.wEn(1'b0)); 						       // We're always reading
+	RAM2  #(
+		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
+		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
+		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count
+		.MEMFILE({FILES_PATH, "colors1.mem"}))  // Memory initialization
+	ColorPalette1(
+		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
+		.addr(colorAddr1),					       // Address from the ImageData RAM
+		.dataOut(colorData1),				       // Color at current pixel
+		.wEn(1'b0)); 						       // We're always reading
 
 
 
@@ -386,89 +386,89 @@ module VGAController(
         //     colorOut = colorData9; 
         if (x < 10'd160 && x> 10'd0 && y < 9'd160 && y > 9'd0) begin
             if(score > 32'd0) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd320 && x > 10'd159 && y < 9'd160 && y > 9'd0) begin
             if(score > 32'd1) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd480 && x> 10'd319 && y < 9'd160 && y > 9'd0) begin
             if(score > 32'd2)begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd640 && x > 10'd479 && y < 9'd160 && y > 9'd0) begin
             if(score > 32'd3) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         
         if (x < 10'd160 && x > 10'd0 && y < 9'd320 && y > 9'd159) begin
             if(score > 32'd4) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd320 && x > 10'd159 && y < 9'd320 && y > 9'd159) begin
             if(score > 32'd5) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd480 && x > 10'd319 && y < 9'd320 && y > 9'd159) begin
             if(score > 32'd6) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd640 && x > 10'd479 && y < 9'd320 && y > 9'd159) begin
             if(score > 32'd7) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
 
         
         if (x < 10'd160 && x > 10'd0 && y < 9'd480 && y > 9'd319) begin
             if(score > 32'd8) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd320 && x > 10'd159 && y < 9'd480 && y > 9'd319) begin
             if(score > 32'd9) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd480 && x > 10'd319 && y < 9'd480 && y > 9'd319) begin
             if(score > 32'd10) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
         if (x < 10'd640 && x > 10'd479 && y < 9'd480 && y > 9'd319) begin
             if(score > 32'd11) begin
-                colorOut=12'd0;
+                colorOut=colorData1;
             end else begin
-                colorOut=12'b111111111111;
+                colorOut=12'd0;
             end
         end
     end

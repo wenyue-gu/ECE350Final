@@ -41,6 +41,7 @@ module test (
     reg in2m;
     reg in3m;
     reg in4m;
+    reg in5m;
 
     // Clock divider 100 MHz -> 25 MHz
 	wire clk125; // 25MHz clock
@@ -57,6 +58,7 @@ module test (
         in2m = in2;
         in3m = in3;
         in4m = in4;
+        in5m = in5;
         o1 = 1'b1;
         o2 = 1'b1;
         o3 = 1'b1;
@@ -101,8 +103,8 @@ module test (
             if (o2==1'b1 && counter2 >= 50000000) begin
                 counter2 <= 0;
                 o2 <= 1'b0;
-                // if (score>32'd0)
-                //     score <= score-32'd1;
+                if (score>32'd0)
+                    score <= score-32'd1;
             end else if(o2==1'b0 && counter2 >= 350000000) begin
                 counter2 <= 0;
                 o2 <= 1'b1;
@@ -117,8 +119,8 @@ module test (
             if (o3==1'b1 && counter3 >= 50000000) begin
                 counter3 <= 0;
                 o3 <= 1'b0;
-                // if (score>32'd0)
-                //     score <= score-32'd1;
+                if (score>32'd0)
+                    score <= score-32'd1;
             end else if(o3==1'b0 && counter3 >= 400000000) begin
                 counter3 <= 0;
                 o3 <= 1'b1;
@@ -133,8 +135,8 @@ module test (
             if (o4==1'b1 && counter4 >= 50000000) begin
                 counter4 <= 0;
                 o4 <= 1'b0;
-                // if (score>32'd0)
-                //     score <= score-32'd1;
+                if (score>32'd0)
+                    score <= score-32'd1;
             end else if(o4==1'b0 && counter4 >= 350000000) begin
                 counter4 <= 0;
                 o4 <= 1'b1;
@@ -158,6 +160,7 @@ module test (
             
             //end 
             if(score>=32'd12) begin
+                in5m = in5;
                 ingame=1'b0;
             end
 
@@ -197,7 +200,7 @@ module test (
             o3 = 1'b1;
             o4 = 1'b1;
             o5 = 1'b1;
-            if ( ( in1==1'b0 && in1!=in1m) ) begin
+            if ( ( in5==1'b0 && in5!=in5m) ) begin
                 ingame <= 1'b1;
                 score <= 32'd3;
                 o1 = 1'b0;
@@ -207,7 +210,7 @@ module test (
                 o5 = 1'b0;
             end
             
-            in1m = in1;
+            in5m = in5;
         end
     end
 
