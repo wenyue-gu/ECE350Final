@@ -128,38 +128,38 @@ module main
                 if (o1 == 1'b1 && clk_counter1 >= 25000000) begin
                         clk_counter1 = 0;
                         o1 <= 1'b0;
-                    // led goes on after 1s	
-                    end else if(o1 == 1'b0 && clk_counter1 >= 25000000) begin
+                    // led goes on after 3s	
+                    end else if(o1 == 1'b0 && clk_counter1 >= 75000000) begin
                         clk_counter1 = 0;
                         o1 <= 1'b1;
                     end
 
                     // led goes off after 1s if no hits 
-                if (o2 == 1'b1 && clk_counter2 >= 50000000) begin
+                if (o2 == 1'b1 && clk_counter2 >= 25000000) begin
                         clk_counter2 = 0;
                         o2 <= 1'b0;
-                    // led goes on after 1s	
-                    end else if(o2 == 1'b0 && clk_counter2 >= 25000000) begin
+                    // led goes on after 5s	
+                    end else if(o2 == 1'b0 && clk_counter2 >= 125000000) begin
                         clk_counter2 = 0;
                         o2 <= 1'b1;
                     end
 
                     // led goes off after 1s if no hits 
-                if (o3 == 1'b1 && clk_counter3 >= 20000000) begin
+                if (o3 == 1'b1 && clk_counter3 >= 25000000) begin
                         clk_counter3 = 0;
                         o3 <= 1'b0;
-                    // led goes on after 1s	
-                    end else if(o3 == 1'b0 && clk_counter3 >= 10000000) begin
+                    // led goes on after 4s	
+                    end else if(o3 == 1'b0 && clk_counter3 >= 100000000) begin
                         clk_counter3 = 0;
                         o3 <= 1'b1;
                     end
 
                     // led goes off after 1s if no hits 
-                if (o4 == 1'b1 && clk_counter4 >= 30000000) begin
+                if (o4 == 1'b1 && clk_counter4 >= 25000000) begin
                         clk_counter4 = 0;
                         o4 <= 1'b0;
-                    // led goes on after 1s	
-                    end else if(o4 == 1'b0 && clk_counter4 >= 25000000) begin
+                    // led goes on after 7s	
+                    end else if(o4 == 1'b0 && clk_counter4 >= 175000000) begin
                         clk_counter4 = 0;
                         o4 <= 1'b1;
                     end
