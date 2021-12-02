@@ -139,28 +139,28 @@ module VGAController(
         end
         
         if (x < 10'd160 && x >= 10'd0 && y < 9'd320 && y > 9'd159) begin
-            if(score > 32'd4) begin
+            if(score > 32'd9) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
             end
         end
         if (x < 10'd320 && x > 10'd159 && y < 9'd320 && y > 9'd159) begin
-            if(score > 32'd5) begin
+            if(score > 32'd10) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
             end
         end
         if (x < 10'd480 && x > 10'd319 && y < 9'd320 && y > 9'd159) begin
-            if(score > 32'd6) begin
+            if(score > 32'd11) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
             end
         end
         if (x < 10'd640 && x > 10'd479 && y < 9'd320 && y > 9'd159) begin
-            if(score > 32'd7) begin
+            if(score > 32'd4) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
@@ -175,21 +175,21 @@ module VGAController(
             end
         end
         if (x < 10'd320 && x > 10'd159 && y < 9'd480 && y > 9'd319) begin
-            if(score > 32'd9) begin
+            if(score > 32'd7) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
             end
         end
         if (x < 10'd480 && x > 10'd319 && y < 9'd480 && y > 9'd319) begin
-            if(score > 32'd10) begin
+            if(score > 32'd6) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
             end
         end
         if (x < 10'd640 && x > 10'd479 && y < 9'd480 && y > 9'd319) begin
-            if(score > 32'd11) begin
+            if(score > 32'd5) begin
                 colorOut=colorData1;
             end else begin
                 colorOut=12'd0;
