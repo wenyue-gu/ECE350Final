@@ -1,0 +1,578 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Dec  2 13:41:52 2021
+# Process ID: 2488
+# Current directory: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1
+# Command line: vivado.exe -log test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test.tcl
+# Log file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/test.vds
+# Journal file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source test.tcl -notrace
+Command: synth_design -top test -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12784
+WARNING: [Synth 8-6901] identifier 'rwe_inst' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/main.v:32]
+WARNING: [Synth 8-6901] identifier 'bypass_B_mux' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:47]
+WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'is_sw_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'is_r_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_addi_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_addi_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'is_r_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_addi_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_addi_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'is_r_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_addi_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_j2_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:79]
+WARNING: [Synth 8-6901] identifier 'is_r_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_addi_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_sw_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_j2_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_r_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'is_lw_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'is_r_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'is_i_dx_no_lwsw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'is_sw_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'is_r_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'is_j2_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:84]
+WARNING: [Synth 8-6901] identifier 'is_addi_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:87]
+WARNING: [Synth 8-6901] identifier 'is_blt_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:87]
+WARNING: [Synth 8-6901] identifier 'is_bne_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:87]
+WARNING: [Synth 8-6901] identifier 'is_addi_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:88]
+WARNING: [Synth 8-6901] identifier 'is_blt_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:88]
+WARNING: [Synth 8-6901] identifier 'is_bne_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:88]
+WARNING: [Synth 8-6901] identifier 'is_addi_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:89]
+WARNING: [Synth 8-6901] identifier 'is_blt_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:89]
+WARNING: [Synth 8-6901] identifier 'is_bne_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:89]
+WARNING: [Synth 8-6901] identifier 'is_addi_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:90]
+WARNING: [Synth 8-6901] identifier 'is_blt_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:90]
+WARNING: [Synth 8-6901] identifier 'is_bne_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:90]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:91]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:92]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:94]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:94]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:96]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:96]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:97]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:97]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:99]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:100]
+WARNING: [Synth 8-6901] identifier 'ir_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:101]
+WARNING: [Synth 8-6901] identifier 'ir_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:102]
+WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:104]
+WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:105]
+INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1136.215 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'test' [C:/Users/zz160/Desktop/ECE350Final/test.v:1]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:60]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:61]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:62]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:63]
+WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:97]
+WARNING: [Synth 8-6090] variable 'score' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:99]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:103]
+INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RAM2' [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 144'b001011100010111101101001011011010110000101100111011001010111001100101111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/image.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2' (2#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData1' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:88]
+WARNING: [Synth 8-7023] instance 'ImageData1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:88]
+INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized0' [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file './images/colors.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized0' (2#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette1' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:102]
+WARNING: [Synth 8-7023] instance 'ColorPalette1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:102]
+INFO: [Synth 8-6155] done synthesizing module 'VGAController' (3#1) [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'test' (4#1) [C:/Users/zz160/Desktop/ECE350Final/test.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1136.215 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.215 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.215 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1136.215 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'in5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'in5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[13]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[2]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[9]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[15]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[16]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[18]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[20]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[21]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[30]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[1]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[3]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[4]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[17]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[27]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[29]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[5]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[7]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[8]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[14]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[22]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[24]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[28]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[19]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[0]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[6]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[10]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[31]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[11]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[12]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[23]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[25]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:154]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[26]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1172.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1172.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.434 ; gain = 36.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.434 ; gain = 36.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for in1m. (constraint file  C:/Users/zz160/Desktop/ECE350Final/constraints.xdc, line 157).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.434 ; gain = 36.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1172.434 ; gain = 36.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---RAMs : 
+	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	               3K Bit	(256 X 12 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   2 Input   12 Bit        Muxes := 13    
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator imgAddress is absorbed into DSP imgAddress.
+DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1186.688 ; gain = 50.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM2:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized0: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below)
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VGAController | C+(A:0x280)*B | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1268.090 ; gain = 131.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1269.121 ; gain = 132.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM2:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM2__parameterized0: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance VGA/ColorPalette1/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    86|
+|3     |DSP48E1  |     1|
+|4     |LUT1     |    38|
+|5     |LUT2     |   124|
+|6     |LUT3     |    78|
+|7     |LUT4     |   188|
+|8     |LUT5     |    47|
+|9     |LUT6     |    78|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |    80|
+|88    |FDCE     |    20|
+|89    |FDRE     |   116|
+|90    |FDSE     |     6|
+|91    |IBUF     |     3|
+|92    |OBUF     |    24|
+|93    |OBUFT    |     6|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1293.914 ; gain = 121.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1301.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1309.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 30f884dd
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 152 Warnings, 41 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1309.824 ; gain = 173.609
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file test_utilization_synth.rpt -pb test_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  2 13:42:39 2021...
