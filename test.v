@@ -45,6 +45,7 @@ module test (
     reg in2m;
     reg in3m;
     reg in4m;
+    reg in5m;
 
     wire clk25; 
 
@@ -60,6 +61,7 @@ module test (
         in2m = in2;
         in3m = in3;
         in4m = in4;
+        in5m = in5;
         o1 = 1'b1;
         o2 = 1'b1;
         o3 = 1'b1;
