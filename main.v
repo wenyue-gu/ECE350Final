@@ -20,8 +20,14 @@ module main
 	output[3:0] VGA_G,  // Green Signal Bits
 	output[3:0] VGA_B,  // Blue Signal Bits
 	inout ps2_clk,
-	inout ps2_data
+	inout ps2_data,
+
+    output       chSel,		// Channel select; 0 for rising edge, 1 for falling edge
+    output       audioOut,	// PWM signal to the audio jack	
+    output       audioEn	// Audio Enable
 );
+
+    wire hit;
             
     (* mark_debug = "true" *) reg was_writing;
     (* mark_debug = "true" *) reg [31:0] score_to_add;
@@ -169,18 +175,21 @@ module main
                     o1 <= 1'b0;
                     clk_counter1 = 0;
                     score_to_add = score_to_add + 32'd1;
+                    hit=1'b1;
                 end
 
                 if (in2 != in2m && in2 == 1'b0 && o2 == 1'b1) begin
                     o2 <= 1'b0;
                     clk_counter2 = 0;
                     score_to_add = score_to_add + 32'd1;
+                    hit=1'b1;
                 end
 
                 if (in3 != in3m && in3 == 1'b0 && o3 == 1'b1) begin
                     o3 <= 1'b0;
                     clk_counter3 = 0;
                     score_to_add = score_to_add + 32'd1;
+                    hit=1'b1;
                 end
 
                 
@@ -188,6 +197,7 @@ module main
                     o4 <= 1'b0;
                     clk_counter4 = 0;
                     score_to_add = score_to_add + 32'd1;
+                    hit=1'b1;
                 end
 
                 clk_counter1 <= clk_counter1 + 1;
@@ -228,7 +238,9 @@ module main
             in4m = in4;
             in5m = in5;
         end
+        hit=1'b0;
     end
 
     VGAController VGA(score_stored, clk25, reset, hSync, vSync, VGA_R, VGA_G, VGA_B, ps2_clk, ps2_data);
+    AudioController Audio(hit, clk25, chSel, audioOut, audioEn);
 endmodule
