@@ -2,42 +2,84 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets in1_IBUF]
 # clock
 
 
-# led output
-# JA1
-set_property PACKAGE_PIN C17 [get_ports o1]
-set_property IOSTANDARD LVCMOS33 [get_ports o1]
-# JA2
-set_property PACKAGE_PIN D18 [get_ports o2]
-set_property IOSTANDARD LVCMOS33 [get_ports o2]
-# JD1
-set_property PACKAGE_PIN H4 [get_ports o3]
-set_property IOSTANDARD LVCMOS33 [get_ports o3]
+# # led output
+# # JA1
+# set_property PACKAGE_PIN C17 [get_ports o1]
+# set_property IOSTANDARD LVCMOS33 [get_ports o1]
+# # JA2
+# set_property PACKAGE_PIN D18 [get_ports o2]
+# set_property IOSTANDARD LVCMOS33 [get_ports o2]
+# # JD1
+# set_property PACKAGE_PIN H4 [get_ports o3]
+# set_property IOSTANDARD LVCMOS33 [get_ports o3]
+# # JD2
+# set_property PACKAGE_PIN H1 [get_ports o4]
+# set_property IOSTANDARD LVCMOS33 [get_ports o4]
+
+# # JD3
+# set_property PACKAGE_PIN G1 [get_ports o5]
+# set_property IOSTANDARD LVCMOS33 [get_ports o5]
+
+
+# # button input
+# # JB1
+# set_property PACKAGE_PIN D14 [get_ports in1]
+# set_property IOSTANDARD LVCMOS33 [get_ports in1]
+# # JB2
+# set_property PACKAGE_PIN F16 [get_ports in2]
+# set_property IOSTANDARD LVCMOS33 [get_ports in2]
+# # JC1
+# set_property PACKAGE_PIN K1 [get_ports in3]
+# set_property IOSTANDARD LVCMOS33 [get_ports in3]
+# # JC2
+# set_property PACKAGE_PIN F6 [get_ports in4]
+# set_property IOSTANDARD LVCMOS33 [get_ports in4]
+
+# # JC3
+# set_property PACKAGE_PIN J2 [get_ports in5]
+# set_property IOSTANDARD LVCMOS33 [get_ports in5]
+
+
+# JC1
+set_property PACKAGE_PIN K1 [get_ports in1]
+set_property IOSTANDARD LVCMOS33 [get_ports in1]
 # JD2
-set_property PACKAGE_PIN H1 [get_ports o4]
+set_property PACKAGE_PIN H1 [get_ports o1]
+set_property IOSTANDARD LVCMOS33 [get_ports o1]
+
+
+# JC2
+set_property PACKAGE_PIN F6 [get_ports in2]
+set_property IOSTANDARD LVCMOS33 [get_ports in2]
+# JD9
+set_property PACKAGE_PIN G2 [get_ports o2]
+set_property IOSTANDARD LVCMOS33 [get_ports o2]
+
+
+# JC3
+set_property PACKAGE_PIN J2 [get_ports in3]
+set_property IOSTANDARD LVCMOS33 [get_ports in3]
+# JD4
+set_property PACKAGE_PIN G3 [get_ports o3]
+set_property IOSTANDARD LVCMOS33 [get_ports o3]
+
+
+# JC4
+set_property PACKAGE_PIN G6 [get_ports in4]
+set_property IOSTANDARD LVCMOS33 [get_ports in4]
+# JD3
+set_property PACKAGE_PIN G1 [get_ports o4]
 set_property IOSTANDARD LVCMOS33 [get_ports o4]
 
-# JD3
-set_property PACKAGE_PIN G1 [get_ports o5]
+
+# JD1
+set_property PACKAGE_PIN H4 [get_ports in5]
+set_property IOSTANDARD LVCMOS33 [get_ports in5]
+# JD10
+set_property PACKAGE_PIN F3 [get_ports o5]
 set_property IOSTANDARD LVCMOS33 [get_ports o5]
 
 
-# button input
-# JB1
-set_property PACKAGE_PIN D14 [get_ports in1]
-set_property IOSTANDARD LVCMOS33 [get_ports in1]
-# JB2
-set_property PACKAGE_PIN F16 [get_ports in2]
-set_property IOSTANDARD LVCMOS33 [get_ports in2]
-# JC1
-set_property PACKAGE_PIN K1 [get_ports in3]
-set_property IOSTANDARD LVCMOS33 [get_ports in3]
-# JC2
-set_property PACKAGE_PIN F6 [get_ports in4]
-set_property IOSTANDARD LVCMOS33 [get_ports in4]
-
-# JC3
-set_property PACKAGE_PIN J2 [get_ports in5]
-set_property IOSTANDARD LVCMOS33 [get_ports in5]
 
 
 # LED
