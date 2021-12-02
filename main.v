@@ -1,9 +1,16 @@
 module main
 (
     input clk,
-    input in5,
-    output o1,
+
+    output reg o1,
+    output reg o2,
+    output reg o3,
+    output reg o4,
+
     input in1,
+    input in2,
+    input in3,
+    input in4,
 
 	output reg led0,
     output reg led1,
@@ -20,26 +27,18 @@ module main
 
 );
             
-     (* mark_debug = "true" *) reg was_writing;
-    // // Create the clock
-	// reg clk = 0;
-	// reg in1;
-	// always
-	// 	#10 clk = ~clk; 
-
-	// TODO: change this 
+    (* mark_debug = "true" *) reg was_writing;
     (* mark_debug = "true" *) reg [31:0] score_to_add;
     (* mark_debug = "true" *) wire write_status = (rwe_inst == 1'd0 && score_to_add != 32'd0 && was_writing == 1'd0);
-    // wire write_status = (rwe_inst == 0 && score_to_add != 0 && was_writing == 0);
-    (* mark_debug = "true" *) reg in1m;
+    (* mark_debug = "true" *) reg in1m, in2m, in3m, in4m;
 
     // Processor 
     wire reset, mwe;
-	(* mark_debug = "true" *) wire[4:0] rd_inst, rd_actual;
     wire[4:0] rs1, rs2;
 	wire[31:0] instAddr, instData, regA, regB,
 		memAddr, memDataIn, memDataOut;
 	(* mark_debug = "true" *) wire rwe_actual, rwe_inst;
+	(* mark_debug = "true" *) wire[4:0] rd_inst, rd_actual;
     (* mark_debug = "true" *) wire [31:0] score_stored, reg30, rData_inst, rData_actual;
     
 	assign reset = 1'b0;
@@ -49,14 +48,17 @@ module main
 
     // leds 
     integer clk_counter1;
+    integer clk_counter2;
+    integer clk_counter3;
+    integer clk_counter4;
     
-    wire clk125; 
+    wire clk25; 
 
 	reg[1:0] processorCounter = 0; 
-    assign clk125 = processorCounter[1];
+    assign clk25 = processorCounter[1];
 	
 	// Main Processing Unit
-	processor CPU(.clock(clk125), .reset(reset), 
+	processor CPU(.clock(clk25), .reset(reset), 
 								
 		// ROM
 		.address_imem(instAddr), .q_imem(instData),
@@ -72,12 +74,12 @@ module main
 	
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({"main", ".mem"}))
-	InstMem(.clk(clk125), 
+	InstMem(.clk(clk25), 
 		.addr(instAddr[11:0]), 
 		.dataOut(instData));
 	
 	// Register File
-	regfile RegisterFile(.clock(clk125), 
+	regfile RegisterFile(.clock(clk25), 
 		.ctrl_writeEnable(rwe_actual), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd_actual),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
@@ -85,20 +87,28 @@ module main
 
 						
 	// Processor Memory (RAM)
-	RAM ProcMem(.clk(clk125), 
+	RAM ProcMem(.clk(clk25), 
 		.wEn(mwe), 
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
 
-    reg light1;
-    assign o1 = light1;
-
     initial begin
         clk_counter1 = 0;
-		// counter = 0;
+        clk_counter2 = 0;
+        clk_counter3 = 0;
+        clk_counter4 = 0;
+
+        o1 = 1'b1;
+        o2 = 1'b1;
+        o3 = 1'b1;
+        o4 = 1'b1;
+
 		in1m = in1;
-        light1 = 1'b1;
+		in2m = in2;
+		in3m = in3;
+		in4m = in4;
+
         score_to_add = 32'd0;
         led0 = 1'b0;
         led1 = 1'b0;
@@ -108,49 +118,94 @@ module main
         led5 = 1'b0;
         was_writing = 1'b0;
 
-        $dumpfile("output.vdc");
-        $dumpvar(0, main);
     end
 
     always @(posedge clk) begin
-		// counter = counter + 1;
         processorCounter <= processorCounter + 1;
-
     end
 
-    always @(posedge clk125) begin
+    always @(posedge clk25) begin
       if (was_writing) begin
 			score_to_add = 32'd0;
             was_writing <= 1'b0;
         end
 
-		// // TODO:
-		// if (clk125 % 10 == 0) 
-        //     in1 <= ~in1;
-
-		// $display("o1: %b, in1: %b, score_stored: %d, score_to_add: %d, write_status: %d, reg30: %d, rData_actual: %d, clk_counter: %d", o1, in1, score_stored, score_to_add, write_status, reg30, rData_actual, clk_counter1);
-		// if (counter == 100)  
-		// 	$finish;
-
 		// led goes off after 1s if no hits 
-       if (light1 == 1'b1 && clk_counter1 >= 25000000) begin
+       if (o1 == 1'b1 && clk_counter1 >= 25000000) begin
             clk_counter1 = 0;
-            light1 <= 1'b0;
-		// led goes on after 2s	
-        end else if(light1==1'b0 && clk_counter1 >= 25000000) begin
+            o1 <= 1'b0;
+		// led goes on after 1s	
+        end else if(o1 == 1'b0 && clk_counter1 >= 25000000) begin
             clk_counter1 = 0;
-            light1 <= 1'b1;
+            o1 <= 1'b1;
+        end
+
+        // led goes off after 1s if no hits 
+       if (o2 == 1'b1 && clk_counter2 >= 50000000) begin
+            clk_counter2 = 0;
+            o2 <= 1'b0;
+		// led goes on after 1s	
+        end else if(o2 == 1'b0 && clk_counter2 >= 25000000) begin
+            clk_counter2 = 0;
+            o2 <= 1'b1;
+        end
+
+        // led goes off after 1s if no hits 
+       if (o3 == 1'b1 && clk_counter3 >= 20000000) begin
+            clk_counter3 = 0;
+            o3 <= 1'b0;
+		// led goes on after 1s	
+        end else if(o3 == 1'b0 && clk_counter3 >= 10000000) begin
+            clk_counter3 = 0;
+            o3 <= 1'b1;
+        end
+
+        // led goes off after 1s if no hits 
+       if (o4 == 1'b1 && clk_counter4 >= 30000000) begin
+            clk_counter4 = 0;
+            o4 <= 1'b0;
+		// led goes on after 1s	
+        end else if(o4 == 1'b0 && clk_counter4 >= 25000000) begin
+            clk_counter4 = 0;
+            o4 <= 1'b1;
         end
 
 		// if pressing status changed & pressed & lights on
-        if (in1 != in1m && in1==1'b0 && light1==1'b1) begin
-            light1 <= 1'b0;
+        if (in1 != in1m && in1 == 1'b0 && o1 == 1'b1) begin
+            o1 <= 1'b0;
             clk_counter1 = 0;
             score_to_add = score_to_add + 32'd1;
         end
 
+        if (in2 != in2m && in2 == 1'b0 && o2 == 1'b1) begin
+            o2 <= 1'b0;
+            clk_counter2 = 0;
+            score_to_add = score_to_add + 32'd1;
+        end
+
+        if (in3 != in3m && in3 == 1'b0 && o3 == 1'b1) begin
+            o3 <= 1'b0;
+            clk_counter3 = 0;
+            score_to_add = score_to_add + 32'd1;
+        end
+
+        
+        if (in4 != in4m && in4 == 1'b0 && o4 == 1'b1) begin
+            o4 <= 1'b0;
+            clk_counter4 = 0;
+            score_to_add = score_to_add + 32'd1;
+        end
+
+
         clk_counter1 <= clk_counter1 + 1;
+        clk_counter2 <= clk_counter2 + 1;
+        clk_counter3 <= clk_counter3 + 1;
+        clk_counter4 <= clk_counter4 + 1;
+        
         in1m = in1;
+        in2m = in2;
+        in3m = in3;
+        in4m = in4;
 
 		if (score_stored % 6 == 32'd0)
             led0 <= 1'b1;
