@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Dec  2 15:07:22 2021
+| Date         : Thu Dec  2 16:33:44 2021
 | Host         : P2-06 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    26 |
-|    Minimum number of control sets                        |    26 |
+| Total control sets                                       |    27 |
+|    Minimum number of control sets                        |    27 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    38 |
+| Unused register locations in slices containing registers |    39 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    26 |
+| Total control sets |    27 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     2 |
-| >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
 | >= 16              |    20 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             127 |           53 |
-| No           | No                    | Yes                    |              14 |            5 |
-| No           | Yes                   | No                     |              46 |           13 |
-| Yes          | No                    | No                     |             132 |           36 |
-| Yes          | No                    | Yes                    |             490 |          182 |
-| Yes          | Yes                   | No                     |              65 |           17 |
+| No           | No                    | No                     |             186 |           90 |
+| No           | No                    | Yes                    |              10 |            5 |
+| No           | Yes                   | No                     |              44 |           13 |
+| Yes          | No                    | No                     |             132 |           35 |
+| Yes          | No                    | Yes                    |             502 |          352 |
+| Yes          | Yes                   | No                     |              71 |           20 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,31 +74,32 @@ Table of Contents
 |  Clock Signal  |              Enable Signal             |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+----------------------------------------+-----------------------------------+------------------+----------------+--------------+
 |  clk_IBUF_BUFG |                                        |                                   |                1 |              2 |         2.00 |
-|  clk25_BUFG    | in5m_i_1_n_0                           |                                   |                4 |              4 |         1.00 |
-| ~clk25_BUFG    |                                        |                                   |                1 |              5 |         5.00 |
-|  clk25_BUFG    |                                        | CPU/dx/loop[31].dpr3/q_reg_1      |                3 |             10 |         3.33 |
-|  clk25_BUFG    | VGA/Display/vPos                       | reset_reg_n_0                     |                4 |             10 |         2.50 |
-|  clk25_BUFG    |                                        | reset_reg_n_0                     |                5 |             14 |         2.80 |
+|  clk25_BUFG    | in5m_i_1_n_0                           |                                   |                3 |              4 |         1.33 |
+|  clk25_BUFG    |                                        | CPU/dx/loop[31].dpr3/q_reg_1      |                3 |              6 |         2.00 |
+|  clk25_BUFG    | CPU/fd/loop[30].dpr1/q_reg_1           | CPU/dx/loop[31].dpr3/q_reg_18     |                3 |              6 |         2.00 |
+|  clk25_BUFG    |                                        | reset_reg_n_0                     |                5 |             10 |         2.00 |
+|  clk25_BUFG    | VGA/Display/vPos                       | reset_reg_n_0                     |                2 |             10 |         5.00 |
+|  clk25_BUFG    | CPU/fd/loop[30].dpr1/q_reg_1           | reset_reg_n_0                     |                4 |             12 |         3.00 |
 |  clk25_BUFG    | clk_counter1[31]_i_1_n_0               | reset                             |                8 |             32 |         4.00 |
-| ~clk25_BUFG    | RegisterFile/registers                 | reset_reg_n_0                     |               19 |             32 |         1.68 |
-| ~clk25_BUFG    | RegisterFile/registers[1][31]_i_1_n_0  | reset_reg_n_0                     |                9 |             32 |         3.56 |
-| ~clk25_BUFG    | RegisterFile/registers[24][31]_i_1_n_0 | reset_reg_n_0                     |                9 |             32 |         3.56 |
-| ~clk25_BUFG    | RegisterFile/registers[26][31]_i_1_n_0 | reset_reg_n_0                     |               10 |             32 |         3.20 |
-| ~clk25_BUFG    | RegisterFile/registers[27][31]_i_1_n_0 | reset_reg_n_0                     |               14 |             32 |         2.29 |
-| ~clk25_BUFG    | RegisterFile/registers[28][31]_i_1_n_0 | reset_reg_n_0                     |               10 |             32 |         3.20 |
-| ~clk25_BUFG    | RegisterFile/registers[29][31]_i_1_n_0 | reset_reg_n_0                     |               12 |             32 |         2.67 |
-| ~clk25_BUFG    | RegisterFile/registers[2][31]_i_1_n_0  | reset_reg_n_0                     |               11 |             32 |         2.91 |
-| ~clk25_BUFG    | RegisterFile/registers[25][31]_i_1_n_0 | reset_reg_n_0                     |               10 |             32 |         3.20 |
-| ~clk25_BUFG    | RegisterFile/registers[4][31]_i_1_n_0  | reset_reg_n_0                     |               10 |             32 |         3.20 |
-| ~clk25_BUFG    | RegisterFile/registers[5][31]_i_1_n_0  | reset_reg_n_0                     |                7 |             32 |         4.57 |
-| ~clk25_BUFG    | RegisterFile/registers[30][31]_i_1_n_0 | reset_reg_n_0                     |               13 |             32 |         2.46 |
-| ~clk25_BUFG    | RegisterFile/registers[7][31]_i_1_n_0  | reset_reg_n_0                     |               20 |             32 |         1.60 |
-| ~clk25_BUFG    | RegisterFile/registers[6][31]_i_1_n_0  | reset_reg_n_0                     |               14 |             32 |         2.29 |
-| ~clk25_BUFG    | RegisterFile/registers[3][31]_i_1_n_0  | reset_reg_n_0                     |               10 |             32 |         3.20 |
+| ~clk25_BUFG    | RegisterFile/registers[3][31]_i_1_n_0  | reset_reg_n_0                     |               22 |             32 |         1.45 |
+| ~clk25_BUFG    | RegisterFile/registers[2][31]_i_1_n_0  | reset_reg_n_0                     |               22 |             32 |         1.45 |
+| ~clk25_BUFG    | RegisterFile/registers[24][31]_i_1_n_0 | reset_reg_n_0                     |               23 |             32 |         1.39 |
+| ~clk25_BUFG    | RegisterFile/registers[28][31]_i_1_n_0 | reset_reg_n_0                     |               24 |             32 |         1.33 |
+| ~clk25_BUFG    | RegisterFile/registers                 | reset_reg_n_0                     |               23 |             32 |         1.39 |
+| ~clk25_BUFG    | RegisterFile/registers[29][31]_i_1_n_0 | reset_reg_n_0                     |               23 |             32 |         1.39 |
+| ~clk25_BUFG    | RegisterFile/registers[27][31]_i_1_n_0 | reset_reg_n_0                     |               25 |             32 |         1.28 |
+| ~clk25_BUFG    | RegisterFile/registers[25][31]_i_1_n_0 | reset_reg_n_0                     |               24 |             32 |         1.33 |
+| ~clk25_BUFG    | RegisterFile/registers[30][31]_i_1_n_0 | reset_reg_n_0                     |               26 |             32 |         1.23 |
+| ~clk25_BUFG    | RegisterFile/registers[26][31]_i_1_n_0 | reset_reg_n_0                     |               25 |             32 |         1.28 |
+| ~clk25_BUFG    | RegisterFile/registers[7][31]_i_1_n_0  | reset_reg_n_0                     |               21 |             32 |         1.52 |
+| ~clk25_BUFG    | RegisterFile/registers[6][31]_i_1_n_0  | reset_reg_n_0                     |               21 |             32 |         1.52 |
+| ~clk25_BUFG    | RegisterFile/registers[1][31]_i_1_n_0  | reset_reg_n_0                     |               22 |             32 |         1.45 |
+| ~clk25_BUFG    | RegisterFile/registers[5][31]_i_1_n_0  | reset_reg_n_0                     |               21 |             32 |         1.52 |
+| ~clk25_BUFG    | RegisterFile/registers[4][31]_i_1_n_0  | reset_reg_n_0                     |               24 |             32 |         1.33 |
 |  clk25_BUFG    | o51_out                                | reset                             |                9 |             33 |         3.67 |
-|  clk25_BUFG    |                                        | CPU/math/inner_result0_carry__6_0 |               10 |             36 |         3.60 |
-|  clk25_BUFG    |                                        |                                   |               51 |            120 |         2.35 |
+|  clk25_BUFG    |                                        | CPU/math/inner_result0_carry__6_0 |               10 |             38 |         3.80 |
 |  clk25_BUFG    | clk_counter1[31]_i_1_n_0               |                                   |               32 |            128 |         4.00 |
+|  clk25_BUFG    |                                        |                                   |               89 |            184 |         2.07 |
 +----------------+----------------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

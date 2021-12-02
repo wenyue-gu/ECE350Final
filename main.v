@@ -179,26 +179,26 @@ module main
                     end
 
                 // if pressing status changed & pressed & lights on
-                if (in1 != in1m && in1 == 1'b0 && o1 == 1'b1) begin
+                if (in1 != in1m && in1 == 1'b1 && o1 == 1'b1) begin
                     o1 <= 1'b0;
                     clk_counter1 = 0;
                     score_to_add = score_to_add + 32'd1;
                 end
 
-                if (in2 != in2m && in2 == 1'b0 && o2 == 1'b1) begin
+                if (in2 != in2m && in2 == 1'b1 && o2 == 1'b1) begin
                     o2 <= 1'b0;
                     clk_counter2 = 0;
                     score_to_add = score_to_add + 32'd1;
                 end
 
-                if (in3 != in3m && in3 == 1'b0 && o3 == 1'b1) begin
+                if (in3 != in3m && in3 == 1'b1 && o3 == 1'b1) begin
                     o3 <= 1'b0;
                     clk_counter3 = 0;
                     score_to_add = score_to_add + 32'd1;
                 end
 
                 
-                if (in4 != in4m && in4 == 1'b0 && o4 == 1'b1) begin
+                if (in4 != in4m && in4 == 1'b1 && o4 == 1'b1) begin
                     o4 <= 1'b0;
                     clk_counter4 = 0;
                     score_to_add = score_to_add + 32'd1;
