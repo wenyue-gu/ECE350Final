@@ -112,6 +112,7 @@ module main
 
         score_to_add = 32'd0;
         reset = 1'b0;
+        hit = 1'b0;
     end
 
     always @(posedge clk) begin
@@ -119,6 +120,10 @@ module main
     end
 
     always @(posedge clk25) begin
+        if (hit) begin
+            hit <= 1'b0;    
+        end
+
         if (reset) begin
             reset <= 1'b0;
         end
@@ -189,21 +194,21 @@ module main
                     o1 <= 1'b0;
                     clk_counter1 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit=1'b1;
+                    hit = 1'b1;
                 end
 
                 if (in2 != in2m && in2 == 1'b1 && o2 == 1'b1) begin
                     o2 <= 1'b0;
                     clk_counter2 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit=1'b1;
+                    hit = 1'b1;
                 end
 
                 if (in3 != in3m && in3 == 1'b1 && o3 == 1'b1) begin
                     o3 <= 1'b0;
                     clk_counter3 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit=1'b1;
+                    hit = 1'b1;
                 end
 
                 
@@ -211,7 +216,7 @@ module main
                     o4 <= 1'b0;
                     clk_counter4 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit=1'b1;
+                    hit = 1'b1;
                 end
 
                 clk_counter1 <= clk_counter1 + 1;
@@ -252,7 +257,7 @@ module main
             in4m = in4;
             in5m = in5;
         end
-        hit=1'b0;
+
     end
 
     VGAController VGA(score_stored, clk25, reset, hSync, vSync, VGA_R, VGA_G, VGA_B, ps2_clk, ps2_data);

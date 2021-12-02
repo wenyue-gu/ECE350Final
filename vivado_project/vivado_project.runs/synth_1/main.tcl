@@ -119,6 +119,9 @@ read_verilog -library xil_defaultlib {
   {C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/multdiv.v}
   C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Wrapper_tb.v
   C:/Users/zz160/Desktop/ECE350Final/test.v
+  C:/Users/zz160/Desktop/ECE350Final/PWMSerializer.v
+  C:/Users/zz160/Desktop/ECE350Final/AudioController.v
+  C:/Users/zz160/Desktop/ECE350Final/PWMDeserializer.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

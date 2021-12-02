@@ -27,24 +27,24 @@ module AudioController(
 	// Your Code Here //
 	////////////////////
 	wire [31:0] thresh;
-	assign thresh = (SYSTEM_FREQ/FREQs[0]) >> 1;
+	assign thresh = (SYSTEM_FREQ/FREQs[10]) >> 1;
 
 	reg audioClk=0;
 	reg[31:0] counter=0;
 
 
 	always @(posedge clk) begin
-		hitcounter = hitcounter + 1;
+		hitcounter <= hitcounter + 1;
 		if(hitcounter == hitthresh)
-			hit2=1'b0;
+			hit2 <= 1'b0;
 
 		if (hit) begin
-			hit2=1'b1;
-			hitcounter=32'b0;
+			hit2 <= 1'b1;
+			hitcounter <= 32'b0;
 		end
 
 		if(counter<thresh-1)
-			counter<=count+1;
+			counter<=counter+1;
 		else begin
 			counter <=0;
 			audioClk<=~audioClk;
