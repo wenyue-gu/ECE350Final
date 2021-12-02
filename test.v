@@ -61,7 +61,6 @@ module test (
         in2m = in2;
         in3m = in3;
         in4m = in4;
-        in5m = in5;
         o1 = 1'b1;
         o2 = 1'b1;
         o3 = 1'b1;

@@ -48,10 +48,10 @@ module VGAController(
 		PALETTE_COLOR_COUNT = 256, 								 // Number of Colors available
 		PALETTE_ADDRESS_WIDTH = $clog2(PALETTE_COLOR_COUNT) + 1; // Use built in log2 Command
 
-	wire[PIXEL_ADDRESS_WIDTH-1:0] endScreenImgAddress;  	 // Image address for the image data
+	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
 	wire[PALETTE_ADDRESS_WIDTH-1:0] endScreenColorPalatte; 	 // Color address for the color palette
 	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr1; 	 // Color address for the color palette
-	assign endScreenImgAddress = x + 640*y;				 // Address calculated coordinate
+	assign imgAddress = x + 640*y;				 // Address calculated coordinate
 
 	RAM2 #(		
 		.DEPTH(PIXEL_COUNT), 				     // Set RAM2  depth to contain every pixel
@@ -60,7 +60,7 @@ module VGAController(
 		.MEMFILE({FILES_PATH, "image10.mem"})) // Memory initialization
 	ImageData0(
 		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(endScreenImgAddress),					 // Image data address
+		.addr(imgAddress),					 // Image data address
 		.dataOut(endScreenColorPalatte),				 // Color palette address
 		.wEn(1'b0)); 						 // We're always reading
 
