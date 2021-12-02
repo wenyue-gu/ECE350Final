@@ -2,23 +2,23 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Dec  2 13:41:52 2021
-# Process ID: 2488
+# Start of session at: Thu Dec  2 15:05:26 2021
+# Process ID: 10904
 # Current directory: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1
-# Command line: vivado.exe -log test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test.tcl
-# Log file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/test.vds
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/main.vds
 # Journal file: C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source test.tcl -notrace
-Command: synth_design -top test -part xc7a100tcsg324-1
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12784
-WARNING: [Synth 8-6901] identifier 'rwe_inst' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/main.v:32]
+INFO: [Synth 8-7075] Helper process launched with PID 8580
+WARNING: [Synth 8-6901] identifier 'rwe_inst' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/main.v:28]
 WARNING: [Synth 8-6901] identifier 'bypass_B_mux' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:47]
 WARNING: [Synth 8-6901] identifier 'is_lw_tail' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:73]
 WARNING: [Synth 8-6901] identifier 'is_sw_mw' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:73]
@@ -120,54 +120,90 @@ WARNING: [Synth 8-6901] identifier 'ir_dx' is used before its declaration [C:/Us
 WARNING: [Synth 8-6901] identifier 'ir_xm' is used before its declaration [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:105]
 INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1136.215 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1186.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'test' [C:/Users/zz160/Desktop/ECE350Final/test.v:1]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:60]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:61]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:62]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/test.v:63]
-WARNING: [Synth 8-6090] variable 'o1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:97]
-WARNING: [Synth 8-6090] variable 'score' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:99]
-WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/test.v:103]
+INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/zz160/Desktop/ECE350Final/main.v:1]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/main.v:101]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/main.v:102]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/main.v:103]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/main.v:104]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/zz160/Desktop/ECE350Final/main.v:105]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [C:/Users/zz160/Desktop/ECE350Final/processor/utils/pc_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (1#1) [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (2#1) [C:/Users/zz160/Desktop/ECE350Final/processor/utils/pc_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/alu.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/alu.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (3#1) [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fd_latch' [C:/Users/zz160/Desktop/ECE350Final/processor/latches/fd_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fd_latch' (4#1) [C:/Users/zz160/Desktop/ECE350Final/processor/latches/fd_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dx_latch' [C:/Users/zz160/Desktop/ECE350Final/processor/latches/dx_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dx_latch' (5#1) [C:/Users/zz160/Desktop/ECE350Final/processor/latches/dx_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2' (6#1) [C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4' (7#1) [C:/Users/zz160/Desktop/ECE350Final/processor/utils/mux_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'xm_latch' [C:/Users/zz160/Desktop/ECE350Final/processor/latches/xm_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'xm_latch' (8#1) [C:/Users/zz160/Desktop/ECE350Final/processor/latches/xm_latch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mw_latch' [C:/Users/zz160/Desktop/ECE350Final/processor/latches/mw_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mw_latch' (9#1) [C:/Users/zz160/Desktop/ECE350Final/processor/latches/mw_latch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (10#1) [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/processor.v:20]
+WARNING: [Synth 8-7071] port 'test_var' of module 'processor' is unconnected for instance 'CPU' [C:/Users/zz160/Desktop/ECE350Final/main.v:53]
+WARNING: [Synth 8-7023] instance 'CPU' of module 'processor' has 16 connections declared, but only 15 given [C:/Users/zz160/Desktop/ECE350Final/main.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/ROM.v:2]
+	Parameter MEMFILE bound to: 64'b0110110101100001011010010110111000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'main.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/ROM.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (11#1) [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (12#1) [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/Provided Behavioral Components/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (13#1) [C:/Users/zz160/Desktop/ECE350Final/processor/processor_main/RAM.v:2]
+WARNING: [Synth 8-6090] variable 'clk_counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/main.v:193]
+WARNING: [Synth 8-6090] variable 'clk_counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/main.v:194]
+WARNING: [Synth 8-6090] variable 'clk_counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/main.v:195]
+WARNING: [Synth 8-6090] variable 'clk_counter4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/zz160/Desktop/ECE350Final/main.v:196]
 INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
 INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v:2]
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter WIDTH bound to: 640 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (14#1) [C:/Users/zz160/Desktop/ECE350Final/VGATimingGenerator.v:2]
 INFO: [Synth 8-6157] synthesizing module 'RAM2' [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
 	Parameter DEPTH bound to: 307200 - type: integer 
 	Parameter MEMFILE bound to: 144'b001011100010111101101001011011010110000101100111011001010111001100101111011010010110110101100001011001110110010100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file './images/image.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'RAM2' (2#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData1' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:88]
-WARNING: [Synth 8-7023] instance 'ImageData1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2' (15#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ImageData1' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:87]
+WARNING: [Synth 8-7023] instance 'ImageData1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:87]
 INFO: [Synth 8-6157] synthesizing module 'RAM2__parameterized0' [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
 	Parameter DEPTH bound to: 256 - type: integer 
 	Parameter MEMFILE bound to: 152'b00101110001011110110100101101101011000010110011101100101011100110010111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file './images/colors.mem' is read successfully [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized0' (2#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette1' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:102]
-WARNING: [Synth 8-7023] instance 'ColorPalette1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:102]
-INFO: [Synth 8-6155] done synthesizing module 'VGAController' (3#1) [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'test' (4#1) [C:/Users/zz160/Desktop/ECE350Final/test.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAM2__parameterized0' (15#1) [C:/Users/zz160/Desktop/ECE350Final/RAM2.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM2' is unconnected for instance 'ColorPalette1' [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:101]
+WARNING: [Synth 8-7023] instance 'ColorPalette1' of module 'RAM2' has 5 connections declared, but only 4 given [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'VGAController' (16#1) [C:/Users/zz160/Desktop/ECE350Final/VGAController.v:2]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RegisterFile'. This will prevent further optimization [C:/Users/zz160/Desktop/ECE350Final/main.v:74]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'CPU'. This will prevent further optimization [C:/Users/zz160/Desktop/ECE350Final/main.v:53]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VGA'. This will prevent further optimization [C:/Users/zz160/Desktop/ECE350Final/main.v:229]
+INFO: [Synth 8-6155] done synthesizing module 'main' (17#1) [C:/Users/zz160/Desktop/ECE350Final/main.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1136.215 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1186.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.215 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1186.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.215 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1186.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1136.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1186.527 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -176,181 +212,238 @@ Parsing XDC File [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]
 WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:1]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:1]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:86]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'o5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:87]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'led0'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:89]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'led0'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:90]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'led1'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:92]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led15'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'led1'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:93]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[13]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:124]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'led2'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:95]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[2]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'led2'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led4'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led4'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led5'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led6'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led7'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led8'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led9'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led10'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led11'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:125]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:125]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[9]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:126]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:126]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[15]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:127]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:127]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[13]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:166]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[16]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:128]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:128]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[2]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:167]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[18]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:129]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:129]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[9]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:168]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[20]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:130]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:130]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[15]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:169]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[21]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:131]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:131]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[16]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:170]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[30]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:132]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:132]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[18]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:171]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[1]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:133]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:133]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[20]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:172]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[3]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:134]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:134]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[21]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:173]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[4]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:135]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:135]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[30]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:174]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[17]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:136]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:136]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[1]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:175]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[27]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:137]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:137]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[3]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:176]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[29]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:138]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:138]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[4]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:177]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[5]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:139]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:139]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[17]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:178]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[7]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:140]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:140]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[27]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:179]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[8]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:141]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:141]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[29]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:180]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[14]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:142]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:142]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[5]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:181]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[22]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:143]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:143]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[7]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:182]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[24]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:144]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:144]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[8]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:183]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[28]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:145]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:145]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[14]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:184]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[19]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:146]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:146]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[22]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:185]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:185]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[0]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:147]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:147]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[24]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:186]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:186]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[6]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:148]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:148]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[28]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:187]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:187]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[10]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:149]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:149]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[19]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:188]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:188]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[31]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:150]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:150]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[0]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:189]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:189]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[11]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:151]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:151]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[6]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:190]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:190]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[12]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:152]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:152]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[10]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:191]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:191]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[23]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:153]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:153]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[31]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:192]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:192]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[25]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:154]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:154]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[11]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:193]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:193]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score_reg[26]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:155]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:155]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[12]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:194]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:194]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:158]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:158]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[23]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:195]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:195]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'score'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:159]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:159]
+WARNING: [Vivado 12-507] No nets matched 'score_reg[25]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:196]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:196]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score_reg[26]'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:197]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:197]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'in1_IBUF'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:200]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:200]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'score'. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:201]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc:201]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zz160/Desktop/ECE350Final/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1172.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1192.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1172.434 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1192.172 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.434 ; gain = 36.219
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1192.172 ; gain = 5.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.434 ; gain = 36.219
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1192.172 ; gain = 5.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property MARK_DEBUG = true for in1m. (constraint file  C:/Users/zz160/Desktop/ECE350Final/constraints.xdc, line 157).
+Applied set_property MARK_DEBUG = true for in1m. (constraint file  C:/Users/zz160/Desktop/ECE350Final/constraints.xdc, line 199).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.434 ; gain = 36.219
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1192.172 ; gain = 5.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1172.434 ; gain = 36.219
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1192.172 ; gain = 5.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 3     
+	   2 Input   33 Bit       Adders := 3     
+	   3 Input   33 Bit       Adders := 3     
+	   2 Input   32 Bit       Adders := 4     
+	   5 Input   32 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 2     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 39    
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 429   
 +---RAMs : 
 	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	             128K Bit	(4096 X 32 bit)          RAMs := 1     
 	               3K Bit	(256 X 12 bit)          RAMs := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 6     
+	   2 Input   32 Bit        Muxes := 34    
+	  13 Input   32 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 13    
 	   2 Input   10 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 51    
+	   7 Input    1 Bit        Muxes := 3     
 	  12 Input    1 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -370,7 +463,7 @@ DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator imgAddress is absorbed into DSP imgAddress.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1186.688 ; gain = 50.473
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1199.457 ; gain = 12.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -401,13 +494,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1268.090 ; gain = 131.875
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1288.547 ; gain = 102.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1269.121 ; gain = 132.906
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1290.805 ; gain = 104.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -467,9 +560,8 @@ INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_
 INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance VGA/ImageData1/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance VGA/ColorPalette1/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -487,37 +579,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -534,45 +626,45 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     2|
-|2     |CARRY4   |    86|
+|2     |CARRY4   |   101|
 |3     |DSP48E1  |     1|
-|4     |LUT1     |    38|
-|5     |LUT2     |   124|
-|6     |LUT3     |    78|
-|7     |LUT4     |   188|
-|8     |LUT5     |    47|
-|9     |LUT6     |    78|
-|10    |RAMB18E1 |     1|
-|11    |RAMB36E1 |    80|
-|88    |FDCE     |    20|
-|89    |FDRE     |   116|
-|90    |FDSE     |     6|
-|91    |IBUF     |     3|
-|92    |OBUF     |    24|
-|93    |OBUFT    |     6|
+|4     |LUT1     |     7|
+|5     |LUT2     |   301|
+|6     |LUT3     |    61|
+|7     |LUT4     |    31|
+|8     |LUT5     |   146|
+|9     |LUT6     |   533|
+|10    |MUXF7    |   128|
+|11    |RAMB18E1 |     1|
+|12    |RAMB36E1 |    80|
+|89    |FDCE     |  1016|
+|90    |FDRE     |   361|
+|91    |FDSE     |     4|
+|92    |IBUF     |     8|
+|93    |OBUF     |    19|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1293.914 ; gain = 121.480
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1293.914 ; gain = 157.699
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1315.531 ; gain = 123.359
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1315.531 ; gain = 129.004
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1301.941 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1323.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 311 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1309.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1331.930 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 30f884dd
+Synth Design complete, checksum: 33567036
 INFO: [Common 17-83] Releasing license: Synthesis
-69 Infos, 152 Warnings, 41 Critical Warnings and 0 Errors encountered.
+99 Infos, 172 Warnings, 57 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1309.824 ; gain = 173.609
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1331.930 ; gain = 145.402
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/test.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file test_utilization_synth.rpt -pb test_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  2 13:42:39 2021...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/zz160/Desktop/ECE350Final/vivado_project/vivado_project.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  2 15:06:20 2021...

@@ -205,6 +205,10 @@ module main
             end
 
             else begin
+                o1 <= 1'b0;
+                o2 <= 1'b0;
+                o3 <= 1'b0;
+                o4 <= 1'b0;
                 o5 <= 1'b1;
                 endgameCounter <= endgameCounter + 1;
 
