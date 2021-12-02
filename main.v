@@ -134,7 +134,11 @@ module main
                 if (o1 == 1'b1 && clk_counter1 >= 25000000) begin
                         clk_counter1 = 0;
                         o1 <= 1'b0;
-                    // led goes on after 3s	
+
+                        if (score_stored + score_to_add > 32'd0) begin
+                            score_to_add = score_to_add - 1;
+                        end
+                    // led goes on after 1s	
                     end else if(o1 == 1'b0 && clk_counter1 >= 75000000) begin
                         clk_counter1 = 0;
                         o1 <= 1'b1;
@@ -144,7 +148,11 @@ module main
                 if (o2 == 1'b1 && clk_counter2 >= 25000000) begin
                         clk_counter2 = 0;
                         o2 <= 1'b0;
-                    // led goes on after 5s	
+
+                        if (score_stored + score_to_add > 32'd0) begin
+                            score_to_add = score_to_add - 1;
+                        end
+                    // led goes on after 1s	
                     end else if(o2 == 1'b0 && clk_counter2 >= 125000000) begin
                         clk_counter2 = 0;
                         o2 <= 1'b1;
@@ -154,7 +162,10 @@ module main
                 if (o3 == 1'b1 && clk_counter3 >= 25000000) begin
                         clk_counter3 = 0;
                         o3 <= 1'b0;
-                    // led goes on after 4s	
+                        if (score_stored + score_to_add > 32'd0) begin
+                            score_to_add = score_to_add - 1;
+                        end
+                    // led goes on after 1s	
                     end else if(o3 == 1'b0 && clk_counter3 >= 100000000) begin
                         clk_counter3 = 0;
                         o3 <= 1'b1;
@@ -164,7 +175,10 @@ module main
                 if (o4 == 1'b1 && clk_counter4 >= 25000000) begin
                         clk_counter4 = 0;
                         o4 <= 1'b0;
-                    // led goes on after 7s	
+                        if (score_stored + score_to_add > 32'd0) begin
+                            score_to_add = score_to_add - 1;
+                        end
+                    // led goes on after 1s	
                     end else if(o4 == 1'b0 && clk_counter4 >= 175000000) begin
                         clk_counter4 = 0;
                         o4 <= 1'b1;
