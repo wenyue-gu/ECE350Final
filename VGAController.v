@@ -1,7 +1,6 @@
 `timescale 1 ns/ 100 ps
 module VGAController(     
 
-    input ingame,
     input [31:0] score,
 
 	input clk, 			// 100 MHz System Clock
@@ -197,8 +196,6 @@ module VGAController(
             end
         end
     end
-    
 
-	// Quickly assign the output colors to their channels using concatenation
-	assign {VGA_R, VGA_G, VGA_B} = ingame ? colorOut : colorOut;
+	assign {VGA_R, VGA_G, VGA_B} = colorOut;
 endmodule
