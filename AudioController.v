@@ -1,5 +1,5 @@
 module AudioController(
-	input 		hit,
+	[1:0]input 		hit,	//hit = 0: nothing; hit=1: hit; hit=2: miss
     input        clk, 		// System Clock Input 100 Mhz
     output       chSel,		// Channel select; 0 for rising edge, 1 for falling edge
     output       audioOut,	// PWM signal to the audio jack	
@@ -13,6 +13,7 @@ module AudioController(
 
 	// Initialize the frequency array. FREQs[0] = 261
 	reg [10:0] FREQs[0:15];
+	reg [31:0] thresh;
 	reg hit2;
 	wire [31:0] hitthresh;
 	assign hitthresh=10000000;
@@ -21,13 +22,12 @@ module AudioController(
 	initial begin
 		hit2 = 1'b0;
 		$readmemh("FREQs.mem", FREQs);
+		thresh = (SYSTEM_FREQ/FREQs[10]) >> 1;
 	end
 	
 	////////////////////
 	// Your Code Here //
 	////////////////////
-	wire [31:0] thresh;
-	assign thresh = (SYSTEM_FREQ/FREQs[10]) >> 1;
 
 	reg audioClk=0;
 	reg[31:0] counter=0;
@@ -38,7 +38,13 @@ module AudioController(
 		if(hitcounter == hitthresh)
 			hit2 <= 1'b0;
 
-		if (hit) begin
+		if (hit!=2'd0) begin
+			if(hit==2'd1) begin
+				thresh <= (SYSTEM_FREQ/FREQs[10]) >> 1;
+			end
+			else begin
+				thresh <= (SYSTEM_FREQ/FREQs[0]) >> 1;
+			end
 			hit2 <= 1'b1;
 			hitcounter <= 32'b0;
 		end

@@ -27,7 +27,7 @@ module main
     output       audioEn	// Audio Enable
 );
 
-    reg hit;
+    reg [1:0]hit;
             
     (* mark_debug = "true" *) reg was_writing;
     (* mark_debug = "true" *) reg [31:0] score_to_add;
@@ -112,7 +112,7 @@ module main
 
         score_to_add = 32'd0;
         reset = 1'b0;
-        hit = 1'b0;
+        hit = 2'd0;
     end
 
     always @(posedge clk) begin
@@ -121,7 +121,7 @@ module main
 
     always @(posedge clk25) begin
         if (hit) begin
-            hit <= 1'b0;    
+            hit <= 2'd0;    
         end
 
         if (reset) begin
@@ -137,78 +137,80 @@ module main
 
                     // led goes off after 1s if no hits 
                 if (o1 == 1'b1 && clk_counter1 >= 25000000) begin
-                        clk_counter1 = 0;
-                        o1 <= 1'b0;
-
-                        if (score_stored + score_to_add > 32'd0) begin
-                            score_to_add = score_to_add - 1;
-                        end
-                    // led goes on after 1s	
-                    end else if(o1 == 1'b0 && clk_counter1 >= 75000000) begin
-                        clk_counter1 = 0;
-                        o1 <= 1'b1;
+                    clk_counter1 = 0;
+                    o1 <= 1'b0;
+                    hit = 2'd2;
+                    if (score_stored + score_to_add > 32'd0) begin
+                        score_to_add = score_to_add - 1;
                     end
+                // led goes on after 1s	
+                end else if(o1 == 1'b0 && clk_counter1 >= 75000000) begin
+                    clk_counter1 = 0;
+                    o1 <= 1'b1;
+                end
 
                     // led goes off after 1s if no hits 
                 if (o2 == 1'b1 && clk_counter2 >= 25000000) begin
-                        clk_counter2 = 0;
-                        o2 <= 1'b0;
-
-                        if (score_stored + score_to_add > 32'd0) begin
-                            score_to_add = score_to_add - 1;
-                        end
-                    // led goes on after 1s	
-                    end else if(o2 == 1'b0 && clk_counter2 >= 125000000) begin
-                        clk_counter2 = 0;
-                        o2 <= 1'b1;
+                    clk_counter2 = 0;
+                    o2 <= 1'b0;
+                    hit = 2'd2;
+                    if (score_stored + score_to_add > 32'd0) begin
+                        score_to_add = score_to_add - 1;
                     end
+                // led goes on after 1s	
+                end else if(o2 == 1'b0 && clk_counter2 >= 125000000) begin
+                    clk_counter2 = 0;
+                    o2 <= 1'b1;
+                end
 
                     // led goes off after 1s if no hits 
                 if (o3 == 1'b1 && clk_counter3 >= 25000000) begin
-                        clk_counter3 = 0;
-                        o3 <= 1'b0;
-                        if (score_stored + score_to_add > 32'd0) begin
-                            score_to_add = score_to_add - 1;
-                        end
-                    // led goes on after 1s	
-                    end else if(o3 == 1'b0 && clk_counter3 >= 100000000) begin
-                        clk_counter3 = 0;
-                        o3 <= 1'b1;
+                    clk_counter3 = 0;
+                    o3 <= 1'b0;
+                    hit = 2'd2;
+                    if (score_stored + score_to_add > 32'd0) begin
+                        score_to_add = score_to_add - 1;
                     end
+                // led goes on after 1s	
+                end else if(o3 == 1'b0 && clk_counter3 >= 100000000) begin
+                    clk_counter3 = 0;
+                    o3 <= 1'b1;
+                end
 
                     // led goes off after 1s if no hits 
                 if (o4 == 1'b1 && clk_counter4 >= 25000000) begin
-                        clk_counter4 = 0;
-                        o4 <= 1'b0;
-                        if (score_stored + score_to_add > 32'd0) begin
-                            score_to_add = score_to_add - 1;
-                        end
-                    // led goes on after 1s	
-                    end else if(o4 == 1'b0 && clk_counter4 >= 175000000) begin
-                        clk_counter4 = 0;
-                        o4 <= 1'b1;
+                    clk_counter4 = 0;
+                    o4 <= 1'b0;
+                    hit = 2'd2;
+                    if (score_stored + score_to_add > 32'd0) begin
+                        score_to_add = score_to_add - 1;
                     end
+                // led goes on after 1s	
+                end else if(o4 == 1'b0 && clk_counter4 >= 175000000) begin
+                    clk_counter4 = 0;
+                    o4 <= 1'b1;
+                end
 
                 // if pressing status changed & pressed & lights on
                 if (in1 != in1m && in1 == 1'b1 && o1 == 1'b1) begin
                     o1 <= 1'b0;
                     clk_counter1 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit = 1'b1;
+                    hit = 2'd1;
                 end
 
                 if (in2 != in2m && in2 == 1'b1 && o2 == 1'b1) begin
                     o2 <= 1'b0;
                     clk_counter2 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit = 1'b1;
+                    hit = 2'd1;
                 end
 
                 if (in3 != in3m && in3 == 1'b1 && o3 == 1'b1) begin
                     o3 <= 1'b0;
                     clk_counter3 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit = 1'b1;
+                    hit = 2'd1;
                 end
 
                 
@@ -216,7 +218,7 @@ module main
                     o4 <= 1'b0;
                     clk_counter4 = 0;
                     score_to_add = score_to_add + 32'd1;
-                    hit = 1'b1;
+                    hit = 2'd1;
                 end
 
                 clk_counter1 <= clk_counter1 + 1;

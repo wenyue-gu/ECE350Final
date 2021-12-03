@@ -11,7 +11,7 @@ module PWMSerializer #(
     PULSE_FREQ = 1,         // How often to check if the pulse should end
     SYS_FREQ   = 100        // Base FPGA Clock; Nexys A7 uses a 100 Mhz Clock
     )(
-    input hit,
+    input [1:0]hit,
     input clk,              // System Clock
     input reset,            // Reset the counter
     input[6:0] duty_cycle,       // Duty Cycle of the Wave, between 0 and 99
@@ -44,7 +44,7 @@ module PWMSerializer #(
     
     // Captured the lessThan signal on the negative edge after it has stabilized
     always @(negedge clk) begin
-        if (hit) 
+        if (hit 
             signal <= lessThan;
         else
             signal <= 0;
