@@ -1,5 +1,5 @@
 module AudioController(
-	[1:0]input 		hit,	//hit = 0: nothing; hit=1: hit; hit=2: miss
+	input[1:0] 		hit,	//hit = 0: nothing; hit=1: hit; hit=2: miss
     input        clk, 		// System Clock Input 100 Mhz
     output       chSel,		// Channel select; 0 for rising edge, 1 for falling edge
     output       audioOut,	// PWM signal to the audio jack	
@@ -22,7 +22,7 @@ module AudioController(
 	initial begin
 		hit2 = 1'b0;
 		$readmemh("FREQs.mem", FREQs);
-		thresh = (SYSTEM_FREQ/FREQs[10]) >> 1;
+		thresh = (SYSTEM_FREQ/FREQs[15]) >> 1;
 	end
 	
 	////////////////////
@@ -40,7 +40,7 @@ module AudioController(
 
 		if (hit!=2'd0) begin
 			if(hit==2'd1) begin
-				thresh <= (SYSTEM_FREQ/FREQs[10]) >> 1;
+				thresh <= (SYSTEM_FREQ/FREQs[15]) >> 1;
 			end
 			else begin
 				thresh <= (SYSTEM_FREQ/FREQs[0]) >> 1;

@@ -44,7 +44,7 @@ module PWMSerializer #(
     
     // Captured the lessThan signal on the negative edge after it has stabilized
     always @(negedge clk) begin
-        if (hit 
+        if (hit) 
             signal <= lessThan;
         else
             signal <= 0;
